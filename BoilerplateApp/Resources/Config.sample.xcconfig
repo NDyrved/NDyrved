@@ -1,0 +1,4 @@
+// Copy to Config.xcconfig and customize per environment
+API_BASE_URL = https://api.example.com
+ANALYTICS_ENABLED = YES
+FEATURE_PAYWALL_ENABLED = YES
