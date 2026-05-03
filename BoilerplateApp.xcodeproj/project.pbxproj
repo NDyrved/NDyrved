@@ -1,0 +1,198 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000002000 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001000 /* AppEnvironment.swift */; };
+		000000000000000000002001 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001001 /* AppRouter.swift */; };
+		000000000000000000002002 /* BoilerplateAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001002 /* BoilerplateAppApp.swift */; };
+		000000000000000000002003 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001003 /* AppError.swift */; };
+		000000000000000000002004 /* FeatureFlagService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001004 /* FeatureFlagService.swift */; };
+		000000000000000000002005 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001005 /* KeychainStore.swift */; };
+		000000000000000000002006 /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001006 /* AppLogger.swift */; };
+		000000000000000000002007 /* NetworkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001007 /* NetworkModels.swift */; };
+		000000000000000000002008 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001008 /* SessionStore.swift */; };
+		000000000000000000002009 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001009 /* AppConfig.swift */; };
+		00000000000000000000200A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100A /* PrimaryButton.swift */; };
+		00000000000000000000200B /* DSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100B /* DSColor.swift */; };
+		00000000000000000000200C /* DSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100C /* DSTextField.swift */; };
+		00000000000000000000200D /* DSCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100D /* DSCard.swift */; };
+		00000000000000000000200E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100E /* LoadingView.swift */; };
+		00000000000000000000200F /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100F /* EmptyStateView.swift */; };
+		000000000000000000002010 /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001010 /* ErrorStateView.swift */; };
+		000000000000000000002011 /* DSTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001011 /* DSTypography.swift */; };
+		000000000000000000002012 /* AuthViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001012 /* AuthViews.swift */; };
+		000000000000000000002013 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001013 /* MainTabView.swift */; };
+		000000000000000000002014 /* LegalViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001014 /* LegalViews.swift */; };
+		000000000000000000002015 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001015 /* OnboardingView.swift */; };
+		000000000000000000002016 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001016 /* PaywallView.swift */; };
+		000000000000000000002017 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001017 /* ProfileView.swift */; };
+		000000000000000000002018 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001018 /* SettingsView.swift */; };
+		000000000000000000002019 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001019 /* Mocks.swift */; };
+		00000000000000000000201A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101A /* Protocols.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000000000000000000003000 /* BoilerplateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoilerplateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000001000 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/AppEnvironment.swift; sourceTree = "<group>"; };
+		000000000000000000001001 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/AppRouter.swift; sourceTree = "<group>"; };
+		000000000000000000001002 /* BoilerplateAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/BoilerplateAppApp.swift; sourceTree = "<group>"; };
+		000000000000000000001003 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/ErrorHandling/AppError.swift; sourceTree = "<group>"; };
+		000000000000000000001004 /* FeatureFlagService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/FeatureFlags/FeatureFlagService.swift; sourceTree = "<group>"; };
+		000000000000000000001005 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Keychain/KeychainStore.swift; sourceTree = "<group>"; };
+		000000000000000000001006 /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Logger/AppLogger.swift; sourceTree = "<group>"; };
+		000000000000000000001007 /* NetworkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Networking/NetworkModels.swift; sourceTree = "<group>"; };
+		000000000000000000001008 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Storage/SessionStore.swift; sourceTree = "<group>"; };
+		000000000000000000001009 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Utilities/AppConfig.swift; sourceTree = "<group>"; };
+		00000000000000000000100A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Buttons/PrimaryButton.swift; sourceTree = "<group>"; };
+		00000000000000000000100B /* DSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Colors/DSColor.swift; sourceTree = "<group>"; };
+		00000000000000000000100C /* DSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Inputs/DSTextField.swift; sourceTree = "<group>"; };
+		00000000000000000000100D /* DSCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Layout/DSCard.swift; sourceTree = "<group>"; };
+		00000000000000000000100E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Loading/LoadingView.swift; sourceTree = "<group>"; };
+		00000000000000000000100F /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/States/EmptyStateView.swift; sourceTree = "<group>"; };
+		000000000000000000001010 /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/States/ErrorStateView.swift; sourceTree = "<group>"; };
+		000000000000000000001011 /* DSTypography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Typography/DSTypography.swift; sourceTree = "<group>"; };
+		000000000000000000001012 /* AuthViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Authentication/AuthViews.swift; sourceTree = "<group>"; };
+		000000000000000000001013 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Home/MainTabView.swift; sourceTree = "<group>"; };
+		000000000000000000001014 /* LegalViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Legal/LegalViews.swift; sourceTree = "<group>"; };
+		000000000000000000001015 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Onboarding/OnboardingView.swift; sourceTree = "<group>"; };
+		000000000000000000001016 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Paywall/PaywallView.swift; sourceTree = "<group>"; };
+		000000000000000000001017 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Profile/ProfileView.swift; sourceTree = "<group>"; };
+		000000000000000000001018 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Settings/SettingsView.swift; sourceTree = "<group>"; };
+		000000000000000000001019 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Mocks.swift; sourceTree = "<group>"; };
+		00000000000000000000101A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Protocols.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000000000000000000003007 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000000000000003003 = {isa = PBXGroup; children = (000000000000000000003001 /* BoilerplateApp */, 000000000000000000003002 /* Products */); sourceTree = "<group>"; };
+		000000000000000000003001 /* BoilerplateApp */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000001000 /* AppEnvironment.swift */,
+				000000000000000000001001 /* AppRouter.swift */,
+				000000000000000000001002 /* BoilerplateAppApp.swift */,
+				000000000000000000001003 /* AppError.swift */,
+				000000000000000000001004 /* FeatureFlagService.swift */,
+				000000000000000000001005 /* KeychainStore.swift */,
+				000000000000000000001006 /* AppLogger.swift */,
+				000000000000000000001007 /* NetworkModels.swift */,
+				000000000000000000001008 /* SessionStore.swift */,
+				000000000000000000001009 /* AppConfig.swift */,
+				00000000000000000000100A /* PrimaryButton.swift */,
+				00000000000000000000100B /* DSColor.swift */,
+				00000000000000000000100C /* DSTextField.swift */,
+				00000000000000000000100D /* DSCard.swift */,
+				00000000000000000000100E /* LoadingView.swift */,
+				00000000000000000000100F /* EmptyStateView.swift */,
+				000000000000000000001010 /* ErrorStateView.swift */,
+				000000000000000000001011 /* DSTypography.swift */,
+				000000000000000000001012 /* AuthViews.swift */,
+				000000000000000000001013 /* MainTabView.swift */,
+				000000000000000000001014 /* LegalViews.swift */,
+				000000000000000000001015 /* OnboardingView.swift */,
+				000000000000000000001016 /* PaywallView.swift */,
+				000000000000000000001017 /* ProfileView.swift */,
+				000000000000000000001018 /* SettingsView.swift */,
+				000000000000000000001019 /* Mocks.swift */,
+				00000000000000000000101A /* Protocols.swift */,
+			);
+			path = BoilerplateApp;
+			sourceTree = "<group>";
+		};
+		000000000000000000003002 /* Products */ = {isa = PBXGroup; children = (000000000000000000003000 /* BoilerplateApp.app */); name = Products; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000000000000000000003005 /* BoilerplateApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00000000000000000000300E /* Build configuration list for PBXNativeTarget "BoilerplateApp" */;
+			buildPhases = (000000000000000000003006 /* Sources */, 000000000000000000003007 /* Frameworks */, 000000000000000000003008 /* Resources */);
+			buildRules = ();
+			dependencies = ();
+			name = BoilerplateApp;
+			productName = BoilerplateApp;
+			productReference = 000000000000000000003000 /* BoilerplateApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000003004 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 1500; LastUpgradeCheck = 1500; TargetAttributes = {000000000000000000003005 = {CreatedOnToolsVersion = 15.0; }; }; };
+			buildConfigurationList = 00000000000000000000300B /* Build configuration list for PBXProject "BoilerplateApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base);
+			mainGroup = 000000000000000000003003;
+			productRefGroup = 000000000000000000003002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (000000000000000000003005 /* BoilerplateApp */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000000000000000000003008 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000000000000000000003006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000002000 /* AppEnvironment.swift in Sources */,
+				000000000000000000002001 /* AppRouter.swift in Sources */,
+				000000000000000000002002 /* BoilerplateAppApp.swift in Sources */,
+				000000000000000000002003 /* AppError.swift in Sources */,
+				000000000000000000002004 /* FeatureFlagService.swift in Sources */,
+				000000000000000000002005 /* KeychainStore.swift in Sources */,
+				000000000000000000002006 /* AppLogger.swift in Sources */,
+				000000000000000000002007 /* NetworkModels.swift in Sources */,
+				000000000000000000002008 /* SessionStore.swift in Sources */,
+				000000000000000000002009 /* AppConfig.swift in Sources */,
+				00000000000000000000200A /* PrimaryButton.swift in Sources */,
+				00000000000000000000200B /* DSColor.swift in Sources */,
+				00000000000000000000200C /* DSTextField.swift in Sources */,
+				00000000000000000000200D /* DSCard.swift in Sources */,
+				00000000000000000000200E /* LoadingView.swift in Sources */,
+				00000000000000000000200F /* EmptyStateView.swift in Sources */,
+				000000000000000000002010 /* ErrorStateView.swift in Sources */,
+				000000000000000000002011 /* DSTypography.swift in Sources */,
+				000000000000000000002012 /* AuthViews.swift in Sources */,
+				000000000000000000002013 /* MainTabView.swift in Sources */,
+				000000000000000000002014 /* LegalViews.swift in Sources */,
+				000000000000000000002015 /* OnboardingView.swift in Sources */,
+				000000000000000000002016 /* PaywallView.swift in Sources */,
+				000000000000000000002017 /* ProfileView.swift in Sources */,
+				000000000000000000002018 /* SettingsView.swift in Sources */,
+				000000000000000000002019 /* Mocks.swift in Sources */,
+				00000000000000000000201A /* Protocols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000003009 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ANALYZER_NONNULL = YES; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; GCC_C_LANGUAGE_STANDARD = gnu17; GCC_NO_COMMON_BLOCKS = YES; GCC_OPTIMIZATION_LEVEL = 0; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+		00000000000000000000300A /* Release */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ANALYZER_NONNULL = YES; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; COPY_PHASE_STRIP = NO; ENABLE_NS_ASSERTIONS = NO; GCC_C_LANGUAGE_STANDARD = gnu17; GCC_NO_COMMON_BLOCKS = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_COMPILATION_MODE = wholemodule; }; name = Release; };
+		00000000000000000000300C /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = BoilerplateApp; INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity"; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.BoilerplateApp; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
+		00000000000000000000300D /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = BoilerplateApp; INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity"; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.BoilerplateApp; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00000000000000000000300B /* Build configuration list for PBXProject "BoilerplateApp" */ = {isa = XCConfigurationList; buildConfigurations = (000000000000000000003009 /* Debug */, 00000000000000000000300A /* Release */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		00000000000000000000300E /* Build configuration list for PBXNativeTarget "BoilerplateApp" */ = {isa = XCConfigurationList; buildConfigurations = (00000000000000000000300C /* Debug */, 00000000000000000000300D /* Release */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000003004 /* Project object */;
+}
