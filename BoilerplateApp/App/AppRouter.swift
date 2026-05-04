@@ -3,11 +3,14 @@ import SwiftUI
 enum AppRoute: Hashable {
     case onboarding
     case login
-    case register
     case tabs
     case paywall
     case privacy
     case terms
+    case tryon
+    case outfitBuilder(Outfit)
+    case savedOutfits
+    case subscription
 }
 
 struct AppRootView: View {
@@ -18,7 +21,7 @@ struct AppRootView: View {
             if !env.appState.isOnboardingComplete {
                 OnboardingView()
             } else if !env.appState.isAuthenticated {
-                LoginView()
+                AuthView()
             } else {
                 MainTabView()
             }

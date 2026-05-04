@@ -1,34 +1,133 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @EnvironmentObject private var env: AppEnvironment
+    @State private var selectedTab = 0
+
     var body: some View {
-        TabView {
-            HomeView().tabItem { Label("Home", systemImage: "house") }
-            ProfileView().tabItem { Label("Profile", systemImage: "person") }
-            SettingsView().tabItem { Label("Settings", systemImage: "gear") }
+        TabView(selection: $selectedTab) {
+            HomeHubView()
+                .tabItem { Label("Home",     systemImage: "house") }
+                .tag(0)
+
+            DiscoveryView()
+                .tabItem { Label("Search",   systemImage: "magnifyingglass") }
+                .tag(1)
+
+            TryOnView()
+                .tabItem { Label("Builder",  systemImage: "hanger") }
+                .tag(2)
+
+            WardrobeView()
+                .tabItem { Label("Wardrobe", systemImage: "tshirt") }
+                .tag(3)
+
+            ProfileView()
+                .tabItem { Label("Profile",  systemImage: "person") }
+                .tag(4)
+        }
+        .tint(DSColor.accent)
+    }
+}
+
+// MARK: - Home Hub
+/// Landing screen — entry point into the app's core actions.
+struct HomeHubView: View {
+    @EnvironmentObject private var env: AppEnvironment
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 32) {
+
+                    // Hero
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Your Virtual")
+                            .font(DSTypography.display)
+                            .foregroundStyle(DSColor.textPrimary)
+                        Text("Fitting Room")
+                            .font(DSTypography.display)
+                            .foregroundStyle(DSColor.accent)
+                    }
+                    .padding(.horizontal, 24)
+                    .padding(.top, 8)
+
+                    // Quick actions
+                    VStack(alignment: .leading, spacing: 14) {
+                        Text("Get Started")
+                            .font(DSTypography.label)
+                            .foregroundStyle(DSColor.textSecondary)
+                            .padding(.horizontal, 24)
+
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 14) {
+                                QuickActionCard(icon: "hanger",
+                                                title: "Try On",
+                                                subtitle: "Build an outfit")
+                                QuickActionCard(icon: "magnifyingglass",
+                                                title: "Discover",
+                                                subtitle: "Shop curated looks")
+                                QuickActionCard(icon: "tshirt",
+                                                title: "My Wardrobe",
+                                                subtitle: "\(env.outfitStore.outfits.count) saved outfits")
+                            }
+                            .padding(.horizontal, 24)
+                        }
+                    }
+
+                    // Plan status
+                    DSCard {
+                        HStack(spacing: 14) {
+                            Image(systemName: env.isPremium ? "crown.fill" : "sparkles")
+                                .font(.title2)
+                                .foregroundStyle(env.isPremium ? .yellow : DSColor.accent)
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(env.isPremium ? "Premium Active" : "Free Plan")
+                                    .font(DSTypography.bodyMedium)
+                                    .foregroundStyle(DSColor.textPrimary)
+                                Text(env.isPremium
+                                     ? "Unlimited try-ons & AI suggestions"
+                                     : "\(max(0, 3 - env.outfitStore.tryOnCountThisMonth)) try-ons remaining this month")
+                                    .font(DSTypography.caption)
+                                    .foregroundStyle(DSColor.textSecondary)
+                            }
+                            Spacer()
+                        }
+                    }
+                    .padding(.horizontal, 24)
+                }
+                .padding(.bottom, 32)
+            }
+            .background(DSColor.background)
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
 
-struct HomeView: View {
-    @EnvironmentObject private var env: AppEnvironment
-    @State private var message: String?
+// MARK: - Quick Action Card
+private struct QuickActionCard: View {
+    let icon: String
+    let title: String
+    let subtitle: String
 
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 16) {
-                if let message {
-                    DSCard { Text(message) }
-                } else {
-                    LoadingView()
-                }
-                if env.featureFlags.isEnabled(.paywall) {
-                    NavigationLink("Go to Paywall", destination: PaywallView())
-                }
+        VStack(alignment: .leading, spacing: 12) {
+            Image(systemName: icon)
+                .font(.title2)
+                .foregroundStyle(DSColor.accent)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(DSTypography.title3)
+                    .foregroundStyle(DSColor.textPrimary)
+                Text(subtitle)
+                    .font(DSTypography.caption)
+                    .foregroundStyle(DSColor.textSecondary)
             }
-            .padding()
-            .task { if let welcome = try? await env.apiClient.fetchWelcome() { message = welcome.message } }
-            .navigationTitle("Home")
         }
+        .padding(18)
+        .frame(width: 150)
+        .background(DSColor.card)
+        .clipShape(RoundedRectangle(cornerRadius: 18))
+        .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 3)
     }
 }

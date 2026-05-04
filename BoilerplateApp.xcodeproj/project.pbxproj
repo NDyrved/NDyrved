@@ -34,6 +34,36 @@
 		000000000000000000002018 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001018 /* SettingsView.swift */; };
 		000000000000000000002019 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001019 /* Mocks.swift */; };
 		00000000000000000000201A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101A /* Protocols.swift */; };
+		00000000000000000000201B /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101B /* ClothingItem.swift */; };
+		00000000000000000000201C /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101C /* Outfit.swift */; };
+		00000000000000000000201D /* TryOnSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101D /* TryOnSession.swift */; };
+		00000000000000000000201E /* StoreKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101E /* StoreKitService.swift */; };
+		00000000000000000000201F /* ClothingFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101F /* ClothingFetchService.swift */; };
+		000000000000000000002020 /* OutfitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001020 /* OutfitStore.swift */; };
+		000000000000000000002021 /* TryOnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001021 /* TryOnView.swift */; };
+		000000000000000000002022 /* ClothingInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001022 /* ClothingInputView.swift */; };
+		000000000000000000002023 /* PhotoUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001023 /* PhotoUploadView.swift */; };
+		000000000000000000002024 /* SavedOutfitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001024 /* SavedOutfitsView.swift */; };
+		000000000000000000002025 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001025 /* SubscriptionView.swift */; };
+		000000000000000000002026 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001026 /* SecondaryButton.swift */; };
+		000000000000000000002027 /* DSTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001027 /* DSTag.swift */; };
+		000000000000000000002028 /* DSMatchBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001028 /* DSMatchBadge.swift */; };
+		000000000000000000002029 /* DSOutfitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001029 /* DSOutfitCard.swift */; };
+		00000000000000000000202A /* OccasionTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102A /* OccasionTag.swift */; };
+		00000000000000000000202B /* DiscoveryOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102B /* DiscoveryOutfit.swift */; };
+		00000000000000000000202C /* AIStyleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102C /* AIStyleService.swift */; };
+		00000000000000000000202D /* DiscoveryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102D /* DiscoveryService.swift */; };
+		00000000000000000000202E /* WardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102E /* WardrobeView.swift */; };
+		00000000000000000000202F /* MyClothingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102F /* MyClothingView.swift */; };
+		000000000000000000002030 /* MyClothingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001030 /* MyClothingViewModel.swift */; };
+		000000000000000000002031 /* WardrobeSavedOutfitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001031 /* WardrobeSavedOutfitsView.swift */; };
+		000000000000000000002032 /* WardrobeSavedOutfitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001032 /* WardrobeSavedOutfitsViewModel.swift */; };
+		000000000000000000002033 /* AIWardrobeSuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001033 /* AIWardrobeSuggestionsView.swift */; };
+		000000000000000000002034 /* AIWardrobeSuggestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001034 /* AIWardrobeSuggestionsViewModel.swift */; };
+		000000000000000000002035 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001035 /* DiscoveryView.swift */; };
+		000000000000000000002036 /* DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001036 /* DiscoveryViewModel.swift */; };
+		000000000000000000002037 /* OutfitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001037 /* OutfitDetailView.swift */; };
+		000000000000000000002038 /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001038 /* PaywallViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +95,36 @@
 		000000000000000000001018 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Settings/SettingsView.swift; sourceTree = "<group>"; };
 		000000000000000000001019 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Mocks.swift; sourceTree = "<group>"; };
 		00000000000000000000101A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Protocols.swift; sourceTree = "<group>"; };
+		00000000000000000000101B /* ClothingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/ClothingItem.swift; sourceTree = "<group>"; };
+		00000000000000000000101C /* Outfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Outfit.swift; sourceTree = "<group>"; };
+		00000000000000000000101D /* TryOnSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/TryOnSession.swift; sourceTree = "<group>"; };
+		00000000000000000000101E /* StoreKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/StoreKitService.swift; sourceTree = "<group>"; };
+		00000000000000000000101F /* ClothingFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/ClothingFetchService.swift; sourceTree = "<group>"; };
+		000000000000000000001020 /* OutfitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/OutfitStore.swift; sourceTree = "<group>"; };
+		000000000000000000001021 /* TryOnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/TryOn/TryOnView.swift; sourceTree = "<group>"; };
+		000000000000000000001022 /* ClothingInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/ClothingInput/ClothingInputView.swift; sourceTree = "<group>"; };
+		000000000000000000001023 /* PhotoUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/PhotoUpload/PhotoUploadView.swift; sourceTree = "<group>"; };
+		000000000000000000001024 /* SavedOutfitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/SavedOutfits/SavedOutfitsView.swift; sourceTree = "<group>"; };
+		000000000000000000001025 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Subscription/SubscriptionView.swift; sourceTree = "<group>"; };
+		000000000000000000001026 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Buttons/SecondaryButton.swift; sourceTree = "<group>"; };
+		000000000000000000001027 /* DSTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Components/DSTag.swift; sourceTree = "<group>"; };
+		000000000000000000001028 /* DSMatchBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Components/DSMatchBadge.swift; sourceTree = "<group>"; };
+		000000000000000000001029 /* DSOutfitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Components/DSOutfitCard.swift; sourceTree = "<group>"; };
+		00000000000000000000102A /* OccasionTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/OccasionTag.swift; sourceTree = "<group>"; };
+		00000000000000000000102B /* DiscoveryOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/DiscoveryOutfit.swift; sourceTree = "<group>"; };
+		00000000000000000000102C /* AIStyleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/AIStyleService.swift; sourceTree = "<group>"; };
+		00000000000000000000102D /* DiscoveryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/DiscoveryService.swift; sourceTree = "<group>"; };
+		00000000000000000000102E /* WardrobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/WardrobeView.swift; sourceTree = "<group>"; };
+		00000000000000000000102F /* MyClothingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/MyClothingView.swift; sourceTree = "<group>"; };
+		000000000000000000001030 /* MyClothingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/MyClothingViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000001031 /* WardrobeSavedOutfitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/WardrobeSavedOutfitsView.swift; sourceTree = "<group>"; };
+		000000000000000000001032 /* WardrobeSavedOutfitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/WardrobeSavedOutfitsViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000001033 /* AIWardrobeSuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/AIWardrobeSuggestionsView.swift; sourceTree = "<group>"; };
+		000000000000000000001034 /* AIWardrobeSuggestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/AIWardrobeSuggestionsViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000001035 /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Discovery/DiscoveryView.swift; sourceTree = "<group>"; };
+		000000000000000000001036 /* DiscoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Discovery/DiscoveryViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000001037 /* OutfitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Discovery/OutfitDetailView.swift; sourceTree = "<group>"; };
+		000000000000000000001038 /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Paywall/PaywallViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +163,36 @@
 				000000000000000000001018 /* SettingsView.swift */,
 				000000000000000000001019 /* Mocks.swift */,
 				00000000000000000000101A /* Protocols.swift */,
+				00000000000000000000101B /* ClothingItem.swift */,
+				00000000000000000000101C /* Outfit.swift */,
+				00000000000000000000101D /* TryOnSession.swift */,
+				00000000000000000000101E /* StoreKitService.swift */,
+				00000000000000000000101F /* ClothingFetchService.swift */,
+				000000000000000000001020 /* OutfitStore.swift */,
+				000000000000000000001021 /* TryOnView.swift */,
+				000000000000000000001022 /* ClothingInputView.swift */,
+				000000000000000000001023 /* PhotoUploadView.swift */,
+				000000000000000000001024 /* SavedOutfitsView.swift */,
+				000000000000000000001025 /* SubscriptionView.swift */,
+				000000000000000000001026 /* SecondaryButton.swift */,
+				000000000000000000001027 /* DSTag.swift */,
+				000000000000000000001028 /* DSMatchBadge.swift */,
+				000000000000000000001029 /* DSOutfitCard.swift */,
+				00000000000000000000102A /* OccasionTag.swift */,
+				00000000000000000000102B /* DiscoveryOutfit.swift */,
+				00000000000000000000102C /* AIStyleService.swift */,
+				00000000000000000000102D /* DiscoveryService.swift */,
+				00000000000000000000102E /* WardrobeView.swift */,
+				00000000000000000000102F /* MyClothingView.swift */,
+				000000000000000000001030 /* MyClothingViewModel.swift */,
+				000000000000000000001031 /* WardrobeSavedOutfitsView.swift */,
+				000000000000000000001032 /* WardrobeSavedOutfitsViewModel.swift */,
+				000000000000000000001033 /* AIWardrobeSuggestionsView.swift */,
+				000000000000000000001034 /* AIWardrobeSuggestionsViewModel.swift */,
+				000000000000000000001035 /* DiscoveryView.swift */,
+				000000000000000000001036 /* DiscoveryViewModel.swift */,
+				000000000000000000001037 /* OutfitDetailView.swift */,
+				000000000000000000001038 /* PaywallViewModel.swift */,
 			);
 			path = BoilerplateApp;
 			sourceTree = "<group>";
@@ -177,6 +267,36 @@
 				000000000000000000002018 /* SettingsView.swift in Sources */,
 				000000000000000000002019 /* Mocks.swift in Sources */,
 				00000000000000000000201A /* Protocols.swift in Sources */,
+				00000000000000000000201B /* ClothingItem.swift in Sources */,
+				00000000000000000000201C /* Outfit.swift in Sources */,
+				00000000000000000000201D /* TryOnSession.swift in Sources */,
+				00000000000000000000201E /* StoreKitService.swift in Sources */,
+				00000000000000000000201F /* ClothingFetchService.swift in Sources */,
+				000000000000000000002020 /* OutfitStore.swift in Sources */,
+				000000000000000000002021 /* TryOnView.swift in Sources */,
+				000000000000000000002022 /* ClothingInputView.swift in Sources */,
+				000000000000000000002023 /* PhotoUploadView.swift in Sources */,
+				000000000000000000002024 /* SavedOutfitsView.swift in Sources */,
+				000000000000000000002025 /* SubscriptionView.swift in Sources */,
+				000000000000000000002026 /* SecondaryButton.swift in Sources */,
+				000000000000000000002027 /* DSTag.swift in Sources */,
+				000000000000000000002028 /* DSMatchBadge.swift in Sources */,
+				000000000000000000002029 /* DSOutfitCard.swift in Sources */,
+				00000000000000000000202A /* OccasionTag.swift in Sources */,
+				00000000000000000000202B /* DiscoveryOutfit.swift in Sources */,
+				00000000000000000000202C /* AIStyleService.swift in Sources */,
+				00000000000000000000202D /* DiscoveryService.swift in Sources */,
+				00000000000000000000202E /* WardrobeView.swift in Sources */,
+				00000000000000000000202F /* MyClothingView.swift in Sources */,
+				000000000000000000002030 /* MyClothingViewModel.swift in Sources */,
+				000000000000000000002031 /* WardrobeSavedOutfitsView.swift in Sources */,
+				000000000000000000002032 /* WardrobeSavedOutfitsViewModel.swift in Sources */,
+				000000000000000000002033 /* AIWardrobeSuggestionsView.swift in Sources */,
+				000000000000000000002034 /* AIWardrobeSuggestionsViewModel.swift in Sources */,
+				000000000000000000002035 /* DiscoveryView.swift in Sources */,
+				000000000000000000002036 /* DiscoveryViewModel.swift in Sources */,
+				000000000000000000002037 /* OutfitDetailView.swift in Sources */,
+				000000000000000000002038 /* PaywallViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
