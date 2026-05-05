@@ -137,9 +137,14 @@ struct AISuggestionCard: View {
                 }
 
                 // Save button
-                Button(isSaved ? "Saved to Wardrobe" : "Save Look") { onSave() }
-                    .buttonStyle(isSaved ? SecondaryButtonStyle() : PrimaryButtonStyle())
-                    .disabled(isSaved)
+                if isSaved {
+                    Button("Saved to Wardrobe") { onSave() }
+                        .buttonStyle(SecondaryButtonStyle())
+                        .disabled(true)
+                } else {
+                    Button("Save Look") { onSave() }
+                        .buttonStyle(PrimaryButtonStyle())
+                }
             }
             .padding(16)
         }

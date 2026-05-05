@@ -26,7 +26,7 @@ struct DSMatchBadge: View {
     private var badgeColor: Color {
         switch percent {
         case 90...: return DSColor.accent
-        case 75..:  return Color(red: 0.25, green: 0.55, blue: 0.35)
+        case 75...: return Color(red: 0.25, green: 0.55, blue: 0.35)
         default:    return DSColor.textSecondary
         }
     }

@@ -6,7 +6,7 @@ struct MainTabView: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            HomeHubView()
+            HomeHubView(selectedTab: $selectedTab)
                 .tabItem { Label("Home",     systemImage: "house") }
                 .tag(0)
 
@@ -34,6 +34,7 @@ struct MainTabView: View {
 /// Landing screen — entry point into the app's core actions.
 struct HomeHubView: View {
     @EnvironmentObject private var env: AppEnvironment
+    @Binding var selectedTab: Int
 
     var body: some View {
         NavigationStack {
@@ -63,13 +64,19 @@ struct HomeHubView: View {
                             HStack(spacing: 14) {
                                 QuickActionCard(icon: "hanger",
                                                 title: "Try On",
-                                                subtitle: "Build an outfit")
+                                                subtitle: "Build an outfit") {
+                                    selectedTab = 2   // Builder tab
+                                }
                                 QuickActionCard(icon: "magnifyingglass",
                                                 title: "Discover",
-                                                subtitle: "Shop curated looks")
+                                                subtitle: "Shop curated looks") {
+                                    selectedTab = 1   // Search tab
+                                }
                                 QuickActionCard(icon: "tshirt",
                                                 title: "My Wardrobe",
-                                                subtitle: "\(env.outfitStore.outfits.count) saved outfits")
+                                                subtitle: "\(env.outfitStore.outfits.count) saved outfits") {
+                                    selectedTab = 3   // Wardrobe tab
+                                }
                             }
                             .padding(.horizontal, 24)
                         }
@@ -109,25 +116,29 @@ private struct QuickActionCard: View {
     let icon: String
     let title: String
     let subtitle: String
+    let action: () -> Void
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Image(systemName: icon)
-                .font(.title2)
-                .foregroundStyle(DSColor.accent)
-            VStack(alignment: .leading, spacing: 2) {
-                Text(title)
-                    .font(DSTypography.title3)
-                    .foregroundStyle(DSColor.textPrimary)
-                Text(subtitle)
-                    .font(DSTypography.caption)
-                    .foregroundStyle(DSColor.textSecondary)
+        Button(action: action) {
+            VStack(alignment: .leading, spacing: 12) {
+                Image(systemName: icon)
+                    .font(.title2)
+                    .foregroundStyle(DSColor.accent)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(title)
+                        .font(DSTypography.title3)
+                        .foregroundStyle(DSColor.textPrimary)
+                    Text(subtitle)
+                        .font(DSTypography.caption)
+                        .foregroundStyle(DSColor.textSecondary)
+                }
             }
+            .padding(18)
+            .frame(width: 150)
+            .background(DSColor.card)
+            .clipShape(RoundedRectangle(cornerRadius: 18))
+            .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 3)
         }
-        .padding(18)
-        .frame(width: 150)
-        .background(DSColor.card)
-        .clipShape(RoundedRectangle(cornerRadius: 18))
-        .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 3)
+        .buttonStyle(.plain)
     }
 }

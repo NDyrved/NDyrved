@@ -4,8 +4,8 @@ import StoreKit
 // MARK: - Updated product IDs
 extension StoreKitProductID {
     // Override the product ID constants for this app
-    static let premiumMonthlyV2 = "com.appname.monthly"
-    static let premiumAnnualV2  = "com.appname.annual"
+    static let premiumMonthlyV2 = "com.mirra.app.monthly"
+    static let premiumAnnualV2  = "com.mirra.app.annual"
 }
 
 struct PaywallView: View {

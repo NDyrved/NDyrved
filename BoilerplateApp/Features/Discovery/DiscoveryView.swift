@@ -50,14 +50,19 @@ struct DiscoveryView: View {
         }
     }
 
-    // MARK: - Store Filter Bar
+    // MARK: - Store Filter Bar (radio — one brand at a time)
     private var storeFilterBar: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
+                // "All" pill
+                DSTag(label: "All", isSelected: vm.selectedStore == nil) {
+                    vm.selectedStore = nil
+                    Task { await vm.load() }
+                }
                 ForEach(RetailStore.allCases) { store in
                     DSTag(label: store.rawValue,
-                          isSelected: vm.selectedStores.contains(store)) {
-                        vm.toggleStore(store)
+                          isSelected: vm.selectedStore == store) {
+                        vm.selectStore(store)
                     }
                 }
             }

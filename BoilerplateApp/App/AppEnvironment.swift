@@ -75,8 +75,15 @@ final class AppEnvironment: ObservableObject {
         appState.isAuthenticated = value
     }
 
+    // Debug override — long-press plan card in Profile to toggle
+    @Published var debugPremiumOverride: Bool = false
+
     // Convenience: is the current user on premium?
-    var isPremium: Bool { storeKit.tier == .premium }
+    var isPremium: Bool { debugPremiumOverride || storeKit.tier == .premium }
+
+    func toggleDebugPremium() {
+        debugPremiumOverride.toggle()
+    }
 }
 
 struct AppState {

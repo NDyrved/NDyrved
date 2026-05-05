@@ -5,6 +5,7 @@ struct OutfitDetailView: View {
     let outfit: DiscoveryOutfit
     @Environment(\.dismiss) private var dismiss
     @State private var addedIDs = Set<UUID>()
+    @State private var showTryOn = false
 
     var body: some View {
         NavigationStack {
@@ -45,19 +46,36 @@ struct OutfitDetailView: View {
                     }
                     .padding(.horizontal, 16)
 
-                    // Total + Buy All
+                    // Total + action buttons
                     VStack(spacing: 12) {
                         HStack {
                             Text("Total").font(DSTypography.bodyMedium).foregroundStyle(DSColor.textSecondary)
                             Spacer()
                             Text(outfit.formattedTotal).font(DSTypography.title2).foregroundStyle(DSColor.textPrimary)
                         }
-                        Button("Buy Complete Look →") {
+
+                        // Try On button
+                        Button {
+                            showTryOn = true
+                        } label: {
+                            HStack(spacing: 8) {
+                                Image(systemName: "person.fill.viewfinder")
+                                Text("Try On This Look")
+                            }
+                            .frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(PrimaryButtonStyle())
+
+                        // Buy All button
+                        Button {
                             if let url = URL(string: outfit.items.first?.productURL ?? "") {
                                 UIApplication.shared.open(url)
                             }
+                        } label: {
+                            Text("Buy Complete Look →")
+                                .frame(maxWidth: .infinity)
                         }
-                        .buttonStyle(PrimaryButtonStyle())
+                        .buttonStyle(SecondaryButtonStyle())
                     }
                     .padding(.horizontal, 20)
                     .padding(.top, 8)
@@ -84,6 +102,22 @@ struct OutfitDetailView: View {
                         .foregroundStyle(DSColor.textSecondary)
                 }
             }
+            .sheet(isPresented: $showTryOn) {
+                TryOnView(initialItems: tryOnItems)
+                    .environmentObject(env)
+            }
+        }
+    }
+
+    // Convert DiscoveryItems → ClothingItems for the try-on canvas
+    private var tryOnItems: [ClothingItem] {
+        outfit.items.map { item in
+            ClothingItem(
+                sourceURL: item.productURL,
+                productName: item.name,
+                brand: item.brand,
+                category: item.category
+            )
         }
     }
 
@@ -110,8 +144,16 @@ struct DiscoveryItemRow: View {
             // Thumbnail
             Group {
                 if let url = item.imageURL, let u = URL(string: url) {
-                    AsyncImage(url: u) { img in img.resizable().scaledToFill() }
-                        placeholder: { DSColor.surface }
+                    AsyncImage(url: u) { phase in
+                        switch phase {
+                        case .success(let img): img.resizable().scaledToFill()
+                        case .failure:
+                            DSColor.surface
+                                .overlay(Image(systemName: item.category.icon)
+                                    .foregroundStyle(DSColor.textTertiary))
+                        default: DSColor.surface.overlay(ProgressView())
+                        }
+                    }
                 } else {
                     DSColor.surface
                         .overlay(Image(systemName: item.category.icon)

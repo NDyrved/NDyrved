@@ -2,8 +2,16 @@ import SwiftUI
 
 struct TryOnView: View {
     @EnvironmentObject private var env: AppEnvironment
-    @State private var session = TryOnSession()
+    @State private var session: TryOnSession
     @State private var showPhotoSheet = false
+
+    /// Default init — empty session (normal Builder tab)
+    init(initialItems: [ClothingItem] = []) {
+        var s = TryOnSession()
+        s.items = initialItems
+        s.activeItemID = initialItems.first?.id
+        _session = State(initialValue: s)
+    }
     @State private var showClothingSheet = false
     @State private var showPaywall = false
     @State private var showSaveAlert = false

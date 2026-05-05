@@ -8,7 +8,7 @@ struct ProfileView: View {
     var body: some View {
         NavigationStack {
             List {
-                // Plan banner
+                // Plan banner (long-press to toggle debug premium)
                 Section {
                     HStack(spacing: 14) {
                         ZStack {
@@ -21,7 +21,9 @@ struct ProfileView: View {
                         VStack(alignment: .leading, spacing: 2) {
                             Text(env.isPremium ? "Premium Member" : "Free Plan")
                                 .font(.headline)
-                            Text(env.isPremium ? "Unlimited try-ons & saving" : "3 try-ons per month")
+                            Text(env.isPremium
+                                 ? (env.debugPremiumOverride ? "Debug mode — tap & hold to disable" : "Unlimited try-ons & saving")
+                                 : "3 try-ons per month")
                                 .font(.caption)
                                 .foregroundStyle(.secondary)
                         }
@@ -34,6 +36,9 @@ struct ProfileView: View {
                         }
                     }
                     .padding(.vertical, 4)
+                    .onLongPressGesture {
+                        env.toggleDebugPremium()
+                    }
                 }
 
                 Section("Account") {
