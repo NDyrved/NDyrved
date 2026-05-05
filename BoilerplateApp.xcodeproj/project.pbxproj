@@ -343,6 +343,7 @@
 				00000000000000000000202C /* Services/AIStyleService.swift in Sources */,
 				00000000000000000000202D /* Services/DiscoveryService.swift in Sources */,
 				00000000000000000000202E /* Features/Wardrobe/WardrobeView.swift in Sources */,
+				AA00000000000000000000006 /* WishlistView.swift in Sources */,
 				00000000000000000000202F /* Features/Wardrobe/MyClothingView.swift in Sources */,
 				000000000000000000002030 /* Features/Wardrobe/MyClothingViewModel.swift in Sources */,
 				000000000000000000002031 /* Features/Wardrobe/WardrobeSavedOutfitsView.swift in Sources */,
