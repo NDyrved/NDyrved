@@ -22,7 +22,7 @@ struct DiscoveryView: View {
                                 .textInputAutocapitalization(.never)
                                 .keyboardType(.URL)
                                 .submitLabel(.search)
-                                .onSubmit { Task { await vm.fetchProduct() } }
+                                .onSubmit { Task { await vm.fetchProduct(outfitStore: env.outfitStore) } }
 
                             // Paste from clipboard
                             Button {
