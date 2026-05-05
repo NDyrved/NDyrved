@@ -66,6 +66,7 @@
 		000000000000000000002038 /* Features/Paywall/PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001038 /* Features/Paywall/PaywallViewModel.swift */; };
 		AA00000000000000000000002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000001 /* Assets.xcassets */; };
 		AA00000000000000000000004 /* AffiliateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000003 /* AffiliateService.swift */; };
+		AA00000000000000000000006 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000005 /* WishlistView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +130,7 @@
 		000000000000000000003000 /* BoilerplateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoilerplateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA00000000000000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA00000000000000000000003 /* AffiliateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/AffiliateService.swift; sourceTree = "<group>"; };
+		AA00000000000000000000005 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/WishlistView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				000000000000000000001038 /* Features/Paywall/PaywallViewModel.swift */,
 				AA00000000000000000000001 /* Assets.xcassets */,
 				AA00000000000000000000003 /* AffiliateService.swift */,
+				AA00000000000000000000005 /* WishlistView.swift */,
 			);
 			path = BoilerplateApp;
 			sourceTree = "<group>";

@@ -28,7 +28,7 @@ struct DiscoveryView: View {
                             Button {
                                 if let str = UIPasteboard.general.string {
                                     vm.urlInput = str
-                                    Task { await vm.fetchProduct() }
+                                    Task { await vm.fetchProduct(outfitStore: env.outfitStore) }
                                 }
                             } label: {
                                 Image(systemName: "doc.on.clipboard")
@@ -37,7 +37,7 @@ struct DiscoveryView: View {
 
                             // Fetch button
                             Button {
-                                Task { await vm.fetchProduct() }
+                                Task { await vm.fetchProduct(outfitStore: env.outfitStore) }
                             } label: {
                                 Image(systemName: "arrow.right.circle.fill")
                                     .font(.title2)
@@ -154,29 +154,38 @@ private struct ProductResultCard: View {
                 // 4 action buttons
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
 
-                    // Wishlist
+                    // Wishlist — toggle add/remove
                     ActionButton(
                         icon: vm.savedToWishlist ? "heart.fill" : "heart",
                         label: vm.savedToWishlist ? "Wishlisted" : "Wishlist",
                         tint: .pink,
                         filled: vm.savedToWishlist
                     ) {
-                        let item = vm.makeClothingItem(from: meta, url: url)
-                        item.isWishlisted = true
-                        env.outfitStore.saveToWishlist(item)
-                        vm.savedToWishlist = true
+                        if vm.savedToWishlist {
+                            env.outfitStore.removeFromWishlist(sourceURL: url)
+                            vm.savedToWishlist = false
+                        } else {
+                            let item = vm.makeClothingItem(from: meta, url: url)
+                            env.outfitStore.saveToWishlist(item)
+                            vm.savedToWishlist = true
+                        }
                     }
 
-                    // Wardrobe
+                    // Wardrobe — toggle add/remove
                     ActionButton(
                         icon: vm.savedToWardrobe ? "checkmark" : "tshirt",
                         label: vm.savedToWardrobe ? "Saved" : "Wardrobe",
                         tint: DSColor.accent,
                         filled: vm.savedToWardrobe
                     ) {
-                        let item = vm.makeClothingItem(from: meta, url: url)
-                        env.outfitStore.saveClothingItem(item)
-                        vm.savedToWardrobe = true
+                        if vm.savedToWardrobe {
+                            env.outfitStore.removeFromWardrobe(sourceURL: url)
+                            vm.savedToWardrobe = false
+                        } else {
+                            let item = vm.makeClothingItem(from: meta, url: url)
+                            env.outfitStore.saveClothingItem(item)
+                            vm.savedToWardrobe = true
+                        }
                     }
 
                     // Try On

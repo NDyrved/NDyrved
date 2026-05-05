@@ -4,7 +4,7 @@ struct WardrobeView: View {
     @EnvironmentObject private var env: AppEnvironment
     @State private var selectedSection = 0
 
-    private let sections = ["My Clothing", "Saved Outfits", "AI Suggestions"]
+    private let sections = ["My Clothing", "Saved Outfits", "Wishlist"]
 
     var body: some View {
         NavigationStack {
@@ -40,7 +40,7 @@ struct WardrobeView: View {
                 TabView(selection: $selectedSection) {
                     MyClothingView().tag(0)
                     WardrobeSavedOutfitsView().tag(1)
-                    AIWardrobeSuggestionsView().tag(2)
+                    WishlistView().tag(2)
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 .animation(.easeInOut(duration: 0.2), value: selectedSection)

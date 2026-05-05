@@ -77,6 +77,37 @@ final class OutfitStore: ObservableObject {
         try? modelContext.save()
     }
 
+    func removeFromWishlist(sourceURL: String) {
+        let all = wishlistItems()
+        if let match = all.first(where: { $0.sourceURL == sourceURL }) {
+            modelContext.delete(match)
+            try? modelContext.save()
+        }
+    }
+
+    func removeFromWardrobe(sourceURL: String) {
+        let descriptor = FetchDescriptor<ClothingItem>(
+            predicate: #Predicate { $0.isWishlisted == false }
+        )
+        let all = (try? modelContext.fetch(descriptor)) ?? []
+        if let match = all.first(where: { $0.sourceURL == sourceURL }) {
+            modelContext.delete(match)
+            try? modelContext.save()
+        }
+    }
+
+    func isInWardrobe(sourceURL: String) -> Bool {
+        let descriptor = FetchDescriptor<ClothingItem>(
+            predicate: #Predicate { $0.isWishlisted == false }
+        )
+        let all = (try? modelContext.fetch(descriptor)) ?? []
+        return all.contains { $0.sourceURL == sourceURL }
+    }
+
+    func isInWishlist(sourceURL: String) -> Bool {
+        wishlistItems().contains { $0.sourceURL == sourceURL }
+    }
+
     // MARK: - Try-On Count (free tier gating)
     private let tryOnCountKey = "tryOnCount"
     private let tryOnMonthKey = "tryOnMonth"

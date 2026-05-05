@@ -24,12 +24,13 @@ final class DiscoveryViewModel: ObservableObject {
         self.clothingFetch = clothingFetch
     }
 
-    func fetchProduct() async {
+    func fetchProduct(outfitStore: OutfitStore) async {
         let trimmed = urlInput.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return }
         fetchState = .loading
-        savedToWardrobe = false
-        savedToWishlist = false
+        // Pre-populate toggle state from existing saved items
+        savedToWardrobe = outfitStore.isInWardrobe(sourceURL: trimmed)
+        savedToWishlist = outfitStore.isInWishlist(sourceURL: trimmed)
         do {
             let meta = try await clothingFetch.fetch(urlString: trimmed)
             fetchState = .success(meta, trimmed)
