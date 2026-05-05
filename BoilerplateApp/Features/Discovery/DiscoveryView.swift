@@ -2,168 +2,241 @@ import SwiftUI
 
 struct DiscoveryView: View {
     @EnvironmentObject private var env: AppEnvironment
-    @StateObject private var vm: DiscoveryViewModel = .init(service: DiscoveryService())
-    @State private var selectedOutfit: DiscoveryOutfit?
+    @StateObject private var vm = DiscoveryViewModel()
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 0) {
+            ScrollView {
+                VStack(spacing: 24) {
 
-                // Store filter bar
-                storeFilterBar
+                    // URL input card
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Paste a product link from any store")
+                            .font(DSTypography.caption)
+                            .foregroundStyle(DSColor.textSecondary)
 
-                // Occasion + sort row
-                occasionSortRow
+                        HStack(spacing: 10) {
+                            TextField("https://...", text: $vm.urlInput)
+                                .font(DSTypography.body)
+                                .autocorrectionDisabled()
+                                .textInputAutocapitalization(.never)
+                                .keyboardType(.URL)
+                                .submitLabel(.search)
+                                .onSubmit { Task { await vm.fetchProduct() } }
 
-                Divider().foregroundStyle(DSColor.border)
-
-                // Feed
-                ScrollView {
-                    if vm.isLoading {
-                        ProgressView()
-                            .frame(maxWidth: .infinity).padding(.top, 80)
-                    } else if vm.outfits.isEmpty {
-                        EmptyStateView(icon: "magnifyingglass",
-                                       title: "No Results",
-                                       message: "Try adjusting your filters.")
-                    } else {
-                        LazyVStack(spacing: 16) {
-                            ForEach(vm.outfits) { outfit in
-                                Button { selectedOutfit = outfit } label: {
-                                    DiscoveryOutfitCard(outfit: outfit)
+                            // Paste from clipboard
+                            Button {
+                                if let str = UIPasteboard.general.string {
+                                    vm.urlInput = str
+                                    Task { await vm.fetchProduct() }
                                 }
-                                .buttonStyle(.plain)
+                            } label: {
+                                Image(systemName: "doc.on.clipboard")
+                                    .foregroundStyle(DSColor.accent)
                             }
+
+                            // Fetch button
+                            Button {
+                                Task { await vm.fetchProduct() }
+                            } label: {
+                                Image(systemName: "arrow.right.circle.fill")
+                                    .font(.title2)
+                                    .foregroundStyle(DSColor.accent)
+                            }
+                            .disabled(vm.urlInput.isEmpty)
                         }
-                        .padding(16)
+                        .padding(14)
+                        .background(DSColor.card)
+                        .clipShape(RoundedRectangle(cornerRadius: 14))
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 8)
+
+                    // State
+                    switch vm.fetchState {
+                    case .idle:
+                        idlePlaceholder
+                    case .loading:
+                        ProgressView("Fetching product…")
+                            .padding(.top, 60)
+                    case .success(let meta, let url):
+                        ProductResultCard(meta: meta, url: url, vm: vm)
+                            .padding(.horizontal, 20)
+                    case .error(let msg):
+                        VStack(spacing: 10) {
+                            Image(systemName: "exclamationmark.triangle")
+                                .font(.largeTitle)
+                                .foregroundStyle(.orange)
+                            Text(msg)
+                                .font(DSTypography.caption)
+                                .foregroundStyle(DSColor.textSecondary)
+                                .multilineTextAlignment(.center)
+                            Button("Try Again") { vm.reset() }
+                                .font(DSTypography.caption)
+                                .foregroundStyle(DSColor.accent)
+                        }
+                        .padding(.horizontal, 40)
+                        .padding(.top, 40)
                     }
                 }
+                .padding(.bottom, 40)
             }
             .background(DSColor.background)
-            .navigationTitle("Discover")
+            .navigationTitle("Search")
             .navigationBarTitleDisplayMode(.large)
-            .task { await vm.load() }
-            .sheet(item: $selectedOutfit) { outfit in
-                OutfitDetailView(outfit: outfit)
-                    .environmentObject(env)
+            .sheet(isPresented: $vm.showTryOn) {
+                if let item = vm.tryOnItem {
+                    TryOnView(initialItems: [item]).environmentObject(env)
+                }
             }
         }
     }
 
-    // MARK: - Store Filter Bar (radio — one brand at a time)
-    private var storeFilterBar: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 8) {
-                // "All" pill
-                DSTag(label: "All", isSelected: vm.selectedStore == nil) {
-                    vm.selectedStore = nil
-                    Task { await vm.load() }
-                }
-                ForEach(RetailStore.allCases) { store in
-                    DSTag(label: store.rawValue,
-                          isSelected: vm.selectedStore == store) {
-                        vm.selectStore(store)
-                    }
-                }
-            }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 10)
-        }
-    }
-
-    // MARK: - Occasion + Sort Row
-    private var occasionSortRow: some View {
-        HStack {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 8) {
-                    DSTag(label: "All", isSelected: vm.selectedOccasion == nil) {
-                        vm.selectOccasion(nil)
-                    }
-                    ForEach(OccasionTag.allCases) { tag in
-                        DSTag(label: tag.rawValue, isSelected: vm.selectedOccasion == tag) {
-                            vm.selectOccasion(vm.selectedOccasion == tag ? nil : tag)
-                        }
-                    }
-                }
-                .padding(.leading, 16)
-            }
-
-            Spacer()
-
-            Menu {
-                ForEach(DiscoverySortOption.allCases, id: \.self) { opt in
-                    Button(opt.rawValue) { vm.applySort(opt) }
-                }
-            } label: {
-                HStack(spacing: 4) {
-                    Image(systemName: "arrow.up.arrow.down")
-                    Text(vm.sortOption == .aiScore ? "Sort" : vm.sortOption.rawValue)
-                        .lineLimit(1)
-                }
-                .font(DSTypography.caption)
+    private var idlePlaceholder: some View {
+        VStack(spacing: 16) {
+            Image(systemName: "link.badge.plus")
+                .font(.system(size: 52, weight: .ultraLight))
+                .foregroundStyle(DSColor.accent.opacity(0.5))
+            Text("Paste a link from H&M, ASOS, Zara\nor any other store")
+                .font(DSTypography.body)
                 .foregroundStyle(DSColor.textSecondary)
-                .padding(.trailing, 16)
-            }
+                .multilineTextAlignment(.center)
         }
-        .padding(.vertical, 6)
+        .padding(.top, 60)
     }
 }
 
-// MARK: - Discovery Outfit Card
-struct DiscoveryOutfitCard: View {
-    let outfit: DiscoveryOutfit
+// MARK: - Product Result Card
+private struct ProductResultCard: View {
+    @EnvironmentObject private var env: AppEnvironment
+    let meta: FetchedClothingMeta
+    let url: String
+    @ObservedObject var vm: DiscoveryViewModel
 
     var body: some View {
-        DSOutfitCard {
-            VStack(alignment: .leading, spacing: 14) {
+        VStack(spacing: 0) {
 
-                // Item thumbnails + badge
-                HStack(alignment: .top, spacing: 10) {
-                    HStack(spacing: 6) {
-                        ForEach(outfit.items.prefix(4)) { item in
-                            Group {
-                                if let url = item.imageURL, let u = URL(string: url) {
-                                    AsyncImage(url: u) { img in img.resizable().scaledToFill() }
-                                        placeholder: { DSColor.surface }
-                                } else {
-                                    DSColor.surface
-                                        .overlay(Image(systemName: item.category.icon)
-                                            .foregroundStyle(DSColor.textTertiary))
-                                }
-                            }
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 90)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
+            // Product image
+            Group {
+                if let data = meta.imageData, let uiImage = UIImage(data: data) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFill()
+                } else if let imageURL = meta.imageURL {
+                    AsyncImage(url: imageURL) { phase in
+                        switch phase {
+                        case .success(let img): img.resizable().scaledToFill()
+                        default: DSColor.card.overlay(ProgressView())
                         }
                     }
-                    DSMatchBadge(percent: outfit.aiMatchPercent)
-                }
-
-                // Name + tags
-                VStack(alignment: .leading, spacing: 6) {
-                    Text(outfit.name)
-                        .font(DSTypography.title3)
-                        .foregroundStyle(DSColor.textPrimary)
-
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 6) {
-                            ForEach(outfit.occasionTags) { tag in DSTag(label: tag.rawValue) }
-                        }
-                    }
-                }
-
-                // Price + CTA
-                HStack {
-                    Text("Complete look from \(outfit.formattedTotal)")
-                        .font(DSTypography.caption)
-                        .foregroundStyle(DSColor.textSecondary)
-                    Spacer()
-                    Text("Buy All →")
-                        .font(DSTypography.label)
-                        .foregroundStyle(DSColor.accent)
+                } else {
+                    DSColor.card
+                        .overlay(Image(systemName: "photo").foregroundStyle(DSColor.textTertiary))
                 }
             }
-            .padding(16)
+            .frame(maxWidth: .infinity)
+            .frame(height: 320)
+            .clipped()
+
+            // Info + actions
+            VStack(alignment: .leading, spacing: 16) {
+                VStack(alignment: .leading, spacing: 4) {
+                    let item = vm.makeClothingItem(from: meta, url: url)
+                    Text(item.brand)
+                        .font(DSTypography.caption2)
+                        .foregroundStyle(DSColor.textTertiary)
+                    Text(meta.productName)
+                        .font(DSTypography.bodyMedium)
+                        .foregroundStyle(DSColor.textPrimary)
+                        .lineLimit(2)
+                }
+
+                // 4 action buttons
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
+
+                    // Wishlist
+                    ActionButton(
+                        icon: vm.savedToWishlist ? "heart.fill" : "heart",
+                        label: vm.savedToWishlist ? "Wishlisted" : "Wishlist",
+                        tint: .pink,
+                        filled: vm.savedToWishlist
+                    ) {
+                        let item = vm.makeClothingItem(from: meta, url: url)
+                        item.isWishlisted = true
+                        env.outfitStore.saveToWishlist(item)
+                        vm.savedToWishlist = true
+                    }
+
+                    // Wardrobe
+                    ActionButton(
+                        icon: vm.savedToWardrobe ? "checkmark" : "tshirt",
+                        label: vm.savedToWardrobe ? "Saved" : "Wardrobe",
+                        tint: DSColor.accent,
+                        filled: vm.savedToWardrobe
+                    ) {
+                        let item = vm.makeClothingItem(from: meta, url: url)
+                        env.outfitStore.saveClothingItem(item)
+                        vm.savedToWardrobe = true
+                    }
+
+                    // Try On
+                    ActionButton(icon: "person.fill.viewfinder", label: "Try On", tint: .blue) {
+                        vm.tryOnItem = vm.makeClothingItem(from: meta, url: url)
+                        vm.showTryOn = true
+                    }
+
+                    // Buy
+                    ActionButton(icon: "bag", label: "Buy", tint: DSColor.accent, primary: true) {
+                        if let affiliateURL = vm.affiliateURL(for: url) {
+                            UIApplication.shared.open(affiliateURL)
+                        }
+                    }
+                }
+
+                Button("Search another product") { vm.reset() }
+                    .font(DSTypography.caption)
+                    .foregroundStyle(DSColor.textTertiary)
+                    .frame(maxWidth: .infinity, alignment: .center)
+            }
+            .padding(20)
+            .background(DSColor.card)
         }
+        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .shadow(color: .black.opacity(0.07), radius: 12, x: 0, y: 4)
+    }
+}
+
+// MARK: - Action Button
+private struct ActionButton: View {
+    let icon: String
+    let label: String
+    var tint: Color = .primary
+    var filled: Bool = false
+    var primary: Bool = false
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            VStack(spacing: 6) {
+                Image(systemName: icon)
+                    .font(.system(size: 20))
+                Text(label)
+                    .font(DSTypography.caption)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 14)
+            .foregroundStyle(primary ? .white : (filled ? tint : tint))
+            .background(
+                primary ? tint :
+                filled  ? tint.opacity(0.12) :
+                          DSColor.background,
+                in: RoundedRectangle(cornerRadius: 14)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 14)
+                    .stroke(primary ? Color.clear : tint.opacity(0.3), lineWidth: 1)
+            )
+        }
+        .buttonStyle(.plain)
     }
 }

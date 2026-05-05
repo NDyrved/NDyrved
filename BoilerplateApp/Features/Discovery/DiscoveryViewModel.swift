@@ -1,41 +1,69 @@
 import Foundation
+import UIKit
 
 @MainActor
 final class DiscoveryViewModel: ObservableObject {
-    @Published var outfits: [DiscoveryOutfit] = []
-    @Published var selectedStore: RetailStore? = nil   // single-brand radio selection
-    @Published var selectedOccasion: OccasionTag? = nil
-    @Published var sortOption: DiscoverySortOption = .aiScore
-    @Published var isLoading = false
 
-    private let service: DiscoveryService
-
-    init(service: DiscoveryService) {
-        self.service = service
+    enum FetchState {
+        case idle
+        case loading
+        case success(FetchedClothingMeta, String)   // meta + original URL
+        case error(String)
     }
 
-    func load() async {
-        isLoading = true
-        try? await Task.sleep(nanoseconds: 400_000_000)
-        outfits = service.fetchOutfits(store: selectedStore,
-                                       occasion: selectedOccasion,
-                                       sort: sortOption)
-        isLoading = false
+    @Published var urlInput: String = ""
+    @Published var fetchState: FetchState = .idle
+    @Published var savedToWardrobe = false
+    @Published var savedToWishlist = false
+    @Published var showTryOn = false
+    @Published var tryOnItem: ClothingItem? = nil
+
+    private let clothingFetch: ClothingFetchService
+
+    init(clothingFetch: ClothingFetchService = ClothingFetchService()) {
+        self.clothingFetch = clothingFetch
     }
 
-    /// Radio-style: tap the same store again to deselect (show all)
-    func selectStore(_ store: RetailStore) {
-        selectedStore = (selectedStore == store) ? nil : store
-        Task { await load() }
+    func fetchProduct() async {
+        let trimmed = urlInput.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+        fetchState = .loading
+        savedToWardrobe = false
+        savedToWishlist = false
+        do {
+            let meta = try await clothingFetch.fetch(urlString: trimmed)
+            fetchState = .success(meta, trimmed)
+        } catch {
+            fetchState = .error(error.localizedDescription)
+        }
     }
 
-    func selectOccasion(_ tag: OccasionTag?) {
-        selectedOccasion = tag
-        Task { await load() }
+    func reset() {
+        urlInput = ""
+        fetchState = .idle
+        savedToWardrobe = false
+        savedToWishlist = false
     }
 
-    func applySort(_ option: DiscoverySortOption) {
-        sortOption = option
-        Task { await load() }
+    /// Builds a ClothingItem from the fetched metadata
+    func makeClothingItem(from meta: FetchedClothingMeta, url: String) -> ClothingItem {
+        ClothingItem(
+            sourceURL: url,
+            imageURL: meta.imageURL?.absoluteString,
+            imageData: meta.imageData,
+            productName: meta.productName,
+            brand: host(from: url)
+        )
+    }
+
+    func affiliateURL(for rawURL: String) -> URL? {
+        AffiliateService.affiliateURL(for: rawURL)
+    }
+
+    private func host(from urlString: String) -> String {
+        URL(string: urlString)?.host?
+            .replacingOccurrences(of: "www.", with: "")
+            .components(separatedBy: ".").first?
+            .capitalized ?? ""
     }
 }

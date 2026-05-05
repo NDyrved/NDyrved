@@ -63,6 +63,20 @@ final class OutfitStore: ObservableObject {
         try? modelContext.save()
     }
 
+    func wishlistItems() -> [ClothingItem] {
+        let descriptor = FetchDescriptor<ClothingItem>(
+            predicate: #Predicate { $0.isWishlisted == true },
+            sortBy: [SortDescriptor(\.addedAt, order: .reverse)]
+        )
+        return (try? modelContext.fetch(descriptor)) ?? []
+    }
+
+    func saveToWishlist(_ item: ClothingItem) {
+        item.isWishlisted = true
+        modelContext.insert(item)
+        try? modelContext.save()
+    }
+
     // MARK: - Try-On Count (free tier gating)
     private let tryOnCountKey = "tryOnCount"
     private let tryOnMonthKey = "tryOnMonth"

@@ -15,6 +15,8 @@ final class ClothingItem {
     var addedAt: Date
 
     // Transform state for try-on canvas
+    var isWishlisted: Bool
+
     var positionX: Double
     var positionY: Double
     var scale: Double
@@ -35,6 +37,7 @@ final class ClothingItem {
         category: ClothingCategory = .top,
         occasionTags: [OccasionTag] = [.casual],
         colorHex: String = "#C4A882",
+        isWishlisted: Bool = false,
         addedAt: Date = .now,
         positionX: Double = 0.5,
         positionY: Double = 0.3,
@@ -50,6 +53,7 @@ final class ClothingItem {
         self.category        = category
         self.occasionTagsRaw = occasionTags.map(\.rawValue)
         self.colorHex        = colorHex
+        self.isWishlisted    = isWishlisted
         self.addedAt         = addedAt
         self.positionX       = positionX
         self.positionY       = positionY
