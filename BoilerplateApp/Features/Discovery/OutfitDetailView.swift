@@ -66,10 +66,12 @@ struct OutfitDetailView: View {
                         }
                         .buttonStyle(PrimaryButtonStyle())
 
-                        // Buy All button
+                        // Buy All button — opens each item via Sovrn affiliate link
                         Button {
-                            if let url = URL(string: outfit.items.first?.productURL ?? "") {
-                                UIApplication.shared.open(url)
+                            for item in outfit.items {
+                                if let url = AffiliateService.affiliateURL(for: item.productURL) {
+                                    UIApplication.shared.open(url)
+                                }
                             }
                         } label: {
                             Text("Buy Complete Look →")
@@ -172,16 +174,32 @@ struct DiscoveryItemRow: View {
 
             Spacer()
 
-            // Add button
-            Button { onAdd() } label: {
-                Image(systemName: isAdded ? "checkmark" : "plus")
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundStyle(isAdded ? DSColor.success : .white)
-                    .frame(width: 36, height: 36)
-                    .background(isAdded ? DSColor.success.opacity(0.15) : DSColor.accent,
-                                in: Circle())
+            // Action buttons
+            VStack(spacing: 6) {
+                // Add to wardrobe
+                Button { onAdd() } label: {
+                    Image(systemName: isAdded ? "checkmark" : "plus")
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundStyle(isAdded ? DSColor.success : .white)
+                        .frame(width: 36, height: 36)
+                        .background(isAdded ? DSColor.success.opacity(0.15) : DSColor.accent,
+                                    in: Circle())
+                }
+                .disabled(isAdded)
+
+                // Buy this item
+                Button {
+                    if let url = AffiliateService.affiliateURL(for: item.productURL) {
+                        UIApplication.shared.open(url)
+                    }
+                } label: {
+                    Image(systemName: "bag")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(DSColor.accent)
+                        .frame(width: 36, height: 36)
+                        .background(DSColor.accent.opacity(0.1), in: Circle())
+                }
             }
-            .disabled(isAdded)
         }
         .padding(14)
         .background(DSColor.card)

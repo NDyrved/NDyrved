@@ -7,209 +7,238 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		000000000000000000002000 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001000 /* AppEnvironment.swift */; };
-		000000000000000000002001 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001001 /* AppRouter.swift */; };
-		000000000000000000002002 /* BoilerplateAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001002 /* BoilerplateAppApp.swift */; };
-		000000000000000000002003 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001003 /* AppError.swift */; };
-		000000000000000000002004 /* FeatureFlagService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001004 /* FeatureFlagService.swift */; };
-		000000000000000000002005 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001005 /* KeychainStore.swift */; };
-		000000000000000000002006 /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001006 /* AppLogger.swift */; };
-		000000000000000000002007 /* NetworkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001007 /* NetworkModels.swift */; };
-		000000000000000000002008 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001008 /* SessionStore.swift */; };
-		000000000000000000002009 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001009 /* AppConfig.swift */; };
-		00000000000000000000200A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100A /* PrimaryButton.swift */; };
-		00000000000000000000200B /* DSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100B /* DSColor.swift */; };
-		00000000000000000000200C /* DSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100C /* DSTextField.swift */; };
-		00000000000000000000200D /* DSCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100D /* DSCard.swift */; };
-		00000000000000000000200E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100E /* LoadingView.swift */; };
-		00000000000000000000200F /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100F /* EmptyStateView.swift */; };
-		000000000000000000002010 /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001010 /* ErrorStateView.swift */; };
-		000000000000000000002011 /* DSTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001011 /* DSTypography.swift */; };
-		000000000000000000002012 /* AuthViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001012 /* AuthViews.swift */; };
-		000000000000000000002013 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001013 /* MainTabView.swift */; };
-		000000000000000000002014 /* LegalViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001014 /* LegalViews.swift */; };
-		000000000000000000002015 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001015 /* OnboardingView.swift */; };
-		000000000000000000002016 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001016 /* PaywallView.swift */; };
-		000000000000000000002017 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001017 /* ProfileView.swift */; };
-		000000000000000000002018 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001018 /* SettingsView.swift */; };
-		000000000000000000002019 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001019 /* Mocks.swift */; };
-		00000000000000000000201A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101A /* Protocols.swift */; };
-		00000000000000000000201B /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101B /* ClothingItem.swift */; };
-		00000000000000000000201C /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101C /* Outfit.swift */; };
-		00000000000000000000201D /* TryOnSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101D /* TryOnSession.swift */; };
-		00000000000000000000201E /* StoreKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101E /* StoreKitService.swift */; };
-		00000000000000000000201F /* ClothingFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101F /* ClothingFetchService.swift */; };
-		000000000000000000002020 /* OutfitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001020 /* OutfitStore.swift */; };
-		000000000000000000002021 /* TryOnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001021 /* TryOnView.swift */; };
-		000000000000000000002022 /* ClothingInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001022 /* ClothingInputView.swift */; };
-		000000000000000000002023 /* PhotoUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001023 /* PhotoUploadView.swift */; };
-		000000000000000000002024 /* SavedOutfitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001024 /* SavedOutfitsView.swift */; };
-		000000000000000000002025 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001025 /* SubscriptionView.swift */; };
-		000000000000000000002026 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001026 /* SecondaryButton.swift */; };
-		000000000000000000002027 /* DSTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001027 /* DSTag.swift */; };
-		000000000000000000002028 /* DSMatchBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001028 /* DSMatchBadge.swift */; };
-		000000000000000000002029 /* DSOutfitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001029 /* DSOutfitCard.swift */; };
-		00000000000000000000202A /* OccasionTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102A /* OccasionTag.swift */; };
-		00000000000000000000202B /* DiscoveryOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102B /* DiscoveryOutfit.swift */; };
-		00000000000000000000202C /* AIStyleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102C /* AIStyleService.swift */; };
-		00000000000000000000202D /* DiscoveryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102D /* DiscoveryService.swift */; };
-		00000000000000000000202E /* WardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102E /* WardrobeView.swift */; };
-		00000000000000000000202F /* MyClothingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102F /* MyClothingView.swift */; };
-		000000000000000000002030 /* MyClothingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001030 /* MyClothingViewModel.swift */; };
-		000000000000000000002031 /* WardrobeSavedOutfitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001031 /* WardrobeSavedOutfitsView.swift */; };
-		000000000000000000002032 /* WardrobeSavedOutfitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001032 /* WardrobeSavedOutfitsViewModel.swift */; };
-		000000000000000000002033 /* AIWardrobeSuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001033 /* AIWardrobeSuggestionsView.swift */; };
-		000000000000000000002034 /* AIWardrobeSuggestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001034 /* AIWardrobeSuggestionsViewModel.swift */; };
-		000000000000000000002035 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001035 /* DiscoveryView.swift */; };
-		000000000000000000002036 /* DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001036 /* DiscoveryViewModel.swift */; };
-		000000000000000000002037 /* OutfitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001037 /* OutfitDetailView.swift */; };
-		000000000000000000002038 /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001038 /* PaywallViewModel.swift */; };
+		000000000000000000002000 /* App/AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001000 /* App/AppEnvironment.swift */; };
+		000000000000000000002001 /* App/AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001001 /* App/AppRouter.swift */; };
+		000000000000000000002002 /* App/BoilerplateAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001002 /* App/BoilerplateAppApp.swift */; };
+		000000000000000000002003 /* Core/ErrorHandling/AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001003 /* Core/ErrorHandling/AppError.swift */; };
+		000000000000000000002004 /* Core/FeatureFlags/FeatureFlagService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001004 /* Core/FeatureFlags/FeatureFlagService.swift */; };
+		000000000000000000002005 /* Core/Keychain/KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001005 /* Core/Keychain/KeychainStore.swift */; };
+		000000000000000000002006 /* Core/Logger/AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001006 /* Core/Logger/AppLogger.swift */; };
+		000000000000000000002007 /* Core/Networking/NetworkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001007 /* Core/Networking/NetworkModels.swift */; };
+		000000000000000000002008 /* Core/Storage/SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001008 /* Core/Storage/SessionStore.swift */; };
+		000000000000000000002009 /* Core/Utilities/AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001009 /* Core/Utilities/AppConfig.swift */; };
+		00000000000000000000200A /* DesignSystem/Buttons/PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100A /* DesignSystem/Buttons/PrimaryButton.swift */; };
+		00000000000000000000200B /* DesignSystem/Colors/DSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100B /* DesignSystem/Colors/DSColor.swift */; };
+		00000000000000000000200C /* DesignSystem/Inputs/DSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100C /* DesignSystem/Inputs/DSTextField.swift */; };
+		00000000000000000000200D /* DesignSystem/Layout/DSCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100D /* DesignSystem/Layout/DSCard.swift */; };
+		00000000000000000000200E /* DesignSystem/Loading/LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100E /* DesignSystem/Loading/LoadingView.swift */; };
+		00000000000000000000200F /* DesignSystem/States/EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000100F /* DesignSystem/States/EmptyStateView.swift */; };
+		000000000000000000002010 /* DesignSystem/States/ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001010 /* DesignSystem/States/ErrorStateView.swift */; };
+		000000000000000000002011 /* DesignSystem/Typography/DSTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001011 /* DesignSystem/Typography/DSTypography.swift */; };
+		000000000000000000002012 /* Features/Authentication/AuthViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001012 /* Features/Authentication/AuthViews.swift */; };
+		000000000000000000002013 /* Features/Home/MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001013 /* Features/Home/MainTabView.swift */; };
+		000000000000000000002014 /* Features/Legal/LegalViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001014 /* Features/Legal/LegalViews.swift */; };
+		000000000000000000002015 /* Features/Onboarding/OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001015 /* Features/Onboarding/OnboardingView.swift */; };
+		000000000000000000002016 /* Features/Paywall/PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001016 /* Features/Paywall/PaywallView.swift */; };
+		000000000000000000002017 /* Features/Profile/ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001017 /* Features/Profile/ProfileView.swift */; };
+		000000000000000000002018 /* Features/Settings/SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001018 /* Features/Settings/SettingsView.swift */; };
+		000000000000000000002019 /* Services/Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001019 /* Services/Mocks.swift */; };
+		00000000000000000000201A /* Services/Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101A /* Services/Protocols.swift */; };
+		00000000000000000000201B /* Models/ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101B /* Models/ClothingItem.swift */; };
+		00000000000000000000201C /* Models/Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101C /* Models/Outfit.swift */; };
+		00000000000000000000201D /* Models/TryOnSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101D /* Models/TryOnSession.swift */; };
+		00000000000000000000201E /* Services/StoreKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101E /* Services/StoreKitService.swift */; };
+		00000000000000000000201F /* Services/ClothingFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000101F /* Services/ClothingFetchService.swift */; };
+		000000000000000000002020 /* Services/OutfitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001020 /* Services/OutfitStore.swift */; };
+		000000000000000000002021 /* Features/TryOn/TryOnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001021 /* Features/TryOn/TryOnView.swift */; };
+		000000000000000000002022 /* Features/ClothingInput/ClothingInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001022 /* Features/ClothingInput/ClothingInputView.swift */; };
+		000000000000000000002023 /* Features/PhotoUpload/PhotoUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001023 /* Features/PhotoUpload/PhotoUploadView.swift */; };
+		000000000000000000002024 /* Features/SavedOutfits/SavedOutfitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001024 /* Features/SavedOutfits/SavedOutfitsView.swift */; };
+		000000000000000000002025 /* Features/Subscription/SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001025 /* Features/Subscription/SubscriptionView.swift */; };
+		000000000000000000002026 /* DesignSystem/Buttons/SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001026 /* DesignSystem/Buttons/SecondaryButton.swift */; };
+		000000000000000000002027 /* DesignSystem/Components/DSTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001027 /* DesignSystem/Components/DSTag.swift */; };
+		000000000000000000002028 /* DesignSystem/Components/DSMatchBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001028 /* DesignSystem/Components/DSMatchBadge.swift */; };
+		000000000000000000002029 /* DesignSystem/Components/DSOutfitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001029 /* DesignSystem/Components/DSOutfitCard.swift */; };
+		00000000000000000000202A /* Models/OccasionTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102A /* Models/OccasionTag.swift */; };
+		00000000000000000000202B /* Models/DiscoveryOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102B /* Models/DiscoveryOutfit.swift */; };
+		00000000000000000000202C /* Services/AIStyleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102C /* Services/AIStyleService.swift */; };
+		00000000000000000000202D /* Services/DiscoveryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102D /* Services/DiscoveryService.swift */; };
+		00000000000000000000202E /* Features/Wardrobe/WardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102E /* Features/Wardrobe/WardrobeView.swift */; };
+		00000000000000000000202F /* Features/Wardrobe/MyClothingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000102F /* Features/Wardrobe/MyClothingView.swift */; };
+		000000000000000000002030 /* Features/Wardrobe/MyClothingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001030 /* Features/Wardrobe/MyClothingViewModel.swift */; };
+		000000000000000000002031 /* Features/Wardrobe/WardrobeSavedOutfitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001031 /* Features/Wardrobe/WardrobeSavedOutfitsView.swift */; };
+		000000000000000000002032 /* Features/Wardrobe/WardrobeSavedOutfitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001032 /* Features/Wardrobe/WardrobeSavedOutfitsViewModel.swift */; };
+		000000000000000000002033 /* Features/Wardrobe/AIWardrobeSuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001033 /* Features/Wardrobe/AIWardrobeSuggestionsView.swift */; };
+		000000000000000000002034 /* Features/Wardrobe/AIWardrobeSuggestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001034 /* Features/Wardrobe/AIWardrobeSuggestionsViewModel.swift */; };
+		000000000000000000002035 /* Features/Discovery/DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001035 /* Features/Discovery/DiscoveryView.swift */; };
+		000000000000000000002036 /* Features/Discovery/DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001036 /* Features/Discovery/DiscoveryViewModel.swift */; };
+		000000000000000000002037 /* Features/Discovery/OutfitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001037 /* Features/Discovery/OutfitDetailView.swift */; };
+		000000000000000000002038 /* Features/Paywall/PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000001038 /* Features/Paywall/PaywallViewModel.swift */; };
 		AA00000000000000000000002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000001 /* Assets.xcassets */; };
+		AA00000000000000000000004 /* AffiliateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000000000000003 /* AffiliateService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000000000000000000001000 /* App/AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/AppEnvironment.swift; sourceTree = "<group>"; };
+		000000000000000000001001 /* App/AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/AppRouter.swift; sourceTree = "<group>"; };
+		000000000000000000001002 /* App/BoilerplateAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/BoilerplateAppApp.swift; sourceTree = "<group>"; };
+		000000000000000000001003 /* Core/ErrorHandling/AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/ErrorHandling/AppError.swift; sourceTree = "<group>"; };
+		000000000000000000001004 /* Core/FeatureFlags/FeatureFlagService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/FeatureFlags/FeatureFlagService.swift; sourceTree = "<group>"; };
+		000000000000000000001005 /* Core/Keychain/KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Keychain/KeychainStore.swift; sourceTree = "<group>"; };
+		000000000000000000001006 /* Core/Logger/AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Logger/AppLogger.swift; sourceTree = "<group>"; };
+		000000000000000000001007 /* Core/Networking/NetworkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Networking/NetworkModels.swift; sourceTree = "<group>"; };
+		000000000000000000001008 /* Core/Storage/SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Storage/SessionStore.swift; sourceTree = "<group>"; };
+		000000000000000000001009 /* Core/Utilities/AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Utilities/AppConfig.swift; sourceTree = "<group>"; };
+		00000000000000000000100A /* DesignSystem/Buttons/PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Buttons/PrimaryButton.swift; sourceTree = "<group>"; };
+		00000000000000000000100B /* DesignSystem/Colors/DSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Colors/DSColor.swift; sourceTree = "<group>"; };
+		00000000000000000000100C /* DesignSystem/Inputs/DSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Inputs/DSTextField.swift; sourceTree = "<group>"; };
+		00000000000000000000100D /* DesignSystem/Layout/DSCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Layout/DSCard.swift; sourceTree = "<group>"; };
+		00000000000000000000100E /* DesignSystem/Loading/LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Loading/LoadingView.swift; sourceTree = "<group>"; };
+		00000000000000000000100F /* DesignSystem/States/EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/States/EmptyStateView.swift; sourceTree = "<group>"; };
+		000000000000000000001010 /* DesignSystem/States/ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/States/ErrorStateView.swift; sourceTree = "<group>"; };
+		000000000000000000001011 /* DesignSystem/Typography/DSTypography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Typography/DSTypography.swift; sourceTree = "<group>"; };
+		000000000000000000001012 /* Features/Authentication/AuthViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Authentication/AuthViews.swift; sourceTree = "<group>"; };
+		000000000000000000001013 /* Features/Home/MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Home/MainTabView.swift; sourceTree = "<group>"; };
+		000000000000000000001014 /* Features/Legal/LegalViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Legal/LegalViews.swift; sourceTree = "<group>"; };
+		000000000000000000001015 /* Features/Onboarding/OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Onboarding/OnboardingView.swift; sourceTree = "<group>"; };
+		000000000000000000001016 /* Features/Paywall/PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Paywall/PaywallView.swift; sourceTree = "<group>"; };
+		000000000000000000001017 /* Features/Profile/ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Profile/ProfileView.swift; sourceTree = "<group>"; };
+		000000000000000000001018 /* Features/Settings/SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Settings/SettingsView.swift; sourceTree = "<group>"; };
+		000000000000000000001019 /* Services/Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Mocks.swift; sourceTree = "<group>"; };
+		00000000000000000000101A /* Services/Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Protocols.swift; sourceTree = "<group>"; };
+		00000000000000000000101B /* Models/ClothingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/ClothingItem.swift; sourceTree = "<group>"; };
+		00000000000000000000101C /* Models/Outfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Outfit.swift; sourceTree = "<group>"; };
+		00000000000000000000101D /* Models/TryOnSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/TryOnSession.swift; sourceTree = "<group>"; };
+		00000000000000000000101E /* Services/StoreKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/StoreKitService.swift; sourceTree = "<group>"; };
+		00000000000000000000101F /* Services/ClothingFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/ClothingFetchService.swift; sourceTree = "<group>"; };
+		000000000000000000001020 /* Services/OutfitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/OutfitStore.swift; sourceTree = "<group>"; };
+		000000000000000000001021 /* Features/TryOn/TryOnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/TryOn/TryOnView.swift; sourceTree = "<group>"; };
+		000000000000000000001022 /* Features/ClothingInput/ClothingInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/ClothingInput/ClothingInputView.swift; sourceTree = "<group>"; };
+		000000000000000000001023 /* Features/PhotoUpload/PhotoUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/PhotoUpload/PhotoUploadView.swift; sourceTree = "<group>"; };
+		000000000000000000001024 /* Features/SavedOutfits/SavedOutfitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/SavedOutfits/SavedOutfitsView.swift; sourceTree = "<group>"; };
+		000000000000000000001025 /* Features/Subscription/SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Subscription/SubscriptionView.swift; sourceTree = "<group>"; };
+		000000000000000000001026 /* DesignSystem/Buttons/SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Buttons/SecondaryButton.swift; sourceTree = "<group>"; };
+		000000000000000000001027 /* DesignSystem/Components/DSTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Components/DSTag.swift; sourceTree = "<group>"; };
+		000000000000000000001028 /* DesignSystem/Components/DSMatchBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Components/DSMatchBadge.swift; sourceTree = "<group>"; };
+		000000000000000000001029 /* DesignSystem/Components/DSOutfitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Components/DSOutfitCard.swift; sourceTree = "<group>"; };
+		00000000000000000000102A /* Models/OccasionTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/OccasionTag.swift; sourceTree = "<group>"; };
+		00000000000000000000102B /* Models/DiscoveryOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/DiscoveryOutfit.swift; sourceTree = "<group>"; };
+		00000000000000000000102C /* Services/AIStyleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/AIStyleService.swift; sourceTree = "<group>"; };
+		00000000000000000000102D /* Services/DiscoveryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/DiscoveryService.swift; sourceTree = "<group>"; };
+		00000000000000000000102E /* Features/Wardrobe/WardrobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/WardrobeView.swift; sourceTree = "<group>"; };
+		00000000000000000000102F /* Features/Wardrobe/MyClothingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/MyClothingView.swift; sourceTree = "<group>"; };
+		000000000000000000001030 /* Features/Wardrobe/MyClothingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/MyClothingViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000001031 /* Features/Wardrobe/WardrobeSavedOutfitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/WardrobeSavedOutfitsView.swift; sourceTree = "<group>"; };
+		000000000000000000001032 /* Features/Wardrobe/WardrobeSavedOutfitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/WardrobeSavedOutfitsViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000001033 /* Features/Wardrobe/AIWardrobeSuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/AIWardrobeSuggestionsView.swift; sourceTree = "<group>"; };
+		000000000000000000001034 /* Features/Wardrobe/AIWardrobeSuggestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/AIWardrobeSuggestionsViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000001035 /* Features/Discovery/DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Discovery/DiscoveryView.swift; sourceTree = "<group>"; };
+		000000000000000000001036 /* Features/Discovery/DiscoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Discovery/DiscoveryViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000001037 /* Features/Discovery/OutfitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Discovery/OutfitDetailView.swift; sourceTree = "<group>"; };
+		000000000000000000001038 /* Features/Paywall/PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Paywall/PaywallViewModel.swift; sourceTree = "<group>"; };
 		000000000000000000003000 /* BoilerplateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoilerplateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000000000000000001000 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/AppEnvironment.swift; sourceTree = "<group>"; };
-		000000000000000000001001 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/AppRouter.swift; sourceTree = "<group>"; };
-		000000000000000000001002 /* BoilerplateAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/BoilerplateAppApp.swift; sourceTree = "<group>"; };
-		000000000000000000001003 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/ErrorHandling/AppError.swift; sourceTree = "<group>"; };
-		000000000000000000001004 /* FeatureFlagService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/FeatureFlags/FeatureFlagService.swift; sourceTree = "<group>"; };
-		000000000000000000001005 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Keychain/KeychainStore.swift; sourceTree = "<group>"; };
-		000000000000000000001006 /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Logger/AppLogger.swift; sourceTree = "<group>"; };
-		000000000000000000001007 /* NetworkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Networking/NetworkModels.swift; sourceTree = "<group>"; };
-		000000000000000000001008 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Storage/SessionStore.swift; sourceTree = "<group>"; };
-		000000000000000000001009 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Utilities/AppConfig.swift; sourceTree = "<group>"; };
-		00000000000000000000100A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Buttons/PrimaryButton.swift; sourceTree = "<group>"; };
-		00000000000000000000100B /* DSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Colors/DSColor.swift; sourceTree = "<group>"; };
-		00000000000000000000100C /* DSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Inputs/DSTextField.swift; sourceTree = "<group>"; };
-		00000000000000000000100D /* DSCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Layout/DSCard.swift; sourceTree = "<group>"; };
-		00000000000000000000100E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Loading/LoadingView.swift; sourceTree = "<group>"; };
-		00000000000000000000100F /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/States/EmptyStateView.swift; sourceTree = "<group>"; };
-		000000000000000000001010 /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/States/ErrorStateView.swift; sourceTree = "<group>"; };
-		000000000000000000001011 /* DSTypography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Typography/DSTypography.swift; sourceTree = "<group>"; };
-		000000000000000000001012 /* AuthViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Authentication/AuthViews.swift; sourceTree = "<group>"; };
-		000000000000000000001013 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Home/MainTabView.swift; sourceTree = "<group>"; };
-		000000000000000000001014 /* LegalViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Legal/LegalViews.swift; sourceTree = "<group>"; };
-		000000000000000000001015 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Onboarding/OnboardingView.swift; sourceTree = "<group>"; };
-		000000000000000000001016 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Paywall/PaywallView.swift; sourceTree = "<group>"; };
-		000000000000000000001017 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Profile/ProfileView.swift; sourceTree = "<group>"; };
-		000000000000000000001018 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Settings/SettingsView.swift; sourceTree = "<group>"; };
-		000000000000000000001019 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Mocks.swift; sourceTree = "<group>"; };
-		00000000000000000000101A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Protocols.swift; sourceTree = "<group>"; };
-		00000000000000000000101B /* ClothingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/ClothingItem.swift; sourceTree = "<group>"; };
-		00000000000000000000101C /* Outfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Outfit.swift; sourceTree = "<group>"; };
-		00000000000000000000101D /* TryOnSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/TryOnSession.swift; sourceTree = "<group>"; };
-		00000000000000000000101E /* StoreKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/StoreKitService.swift; sourceTree = "<group>"; };
-		00000000000000000000101F /* ClothingFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/ClothingFetchService.swift; sourceTree = "<group>"; };
-		000000000000000000001020 /* OutfitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/OutfitStore.swift; sourceTree = "<group>"; };
-		000000000000000000001021 /* TryOnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/TryOn/TryOnView.swift; sourceTree = "<group>"; };
-		000000000000000000001022 /* ClothingInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/ClothingInput/ClothingInputView.swift; sourceTree = "<group>"; };
-		000000000000000000001023 /* PhotoUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/PhotoUpload/PhotoUploadView.swift; sourceTree = "<group>"; };
-		000000000000000000001024 /* SavedOutfitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/SavedOutfits/SavedOutfitsView.swift; sourceTree = "<group>"; };
-		000000000000000000001025 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Subscription/SubscriptionView.swift; sourceTree = "<group>"; };
-		000000000000000000001026 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Buttons/SecondaryButton.swift; sourceTree = "<group>"; };
-		000000000000000000001027 /* DSTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Components/DSTag.swift; sourceTree = "<group>"; };
-		000000000000000000001028 /* DSMatchBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Components/DSMatchBadge.swift; sourceTree = "<group>"; };
-		000000000000000000001029 /* DSOutfitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem/Components/DSOutfitCard.swift; sourceTree = "<group>"; };
-		00000000000000000000102A /* OccasionTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/OccasionTag.swift; sourceTree = "<group>"; };
-		00000000000000000000102B /* DiscoveryOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/DiscoveryOutfit.swift; sourceTree = "<group>"; };
-		00000000000000000000102C /* AIStyleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/AIStyleService.swift; sourceTree = "<group>"; };
-		00000000000000000000102D /* DiscoveryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/DiscoveryService.swift; sourceTree = "<group>"; };
-		00000000000000000000102E /* WardrobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/WardrobeView.swift; sourceTree = "<group>"; };
-		00000000000000000000102F /* MyClothingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/MyClothingView.swift; sourceTree = "<group>"; };
-		000000000000000000001030 /* MyClothingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/MyClothingViewModel.swift; sourceTree = "<group>"; };
-		000000000000000000001031 /* WardrobeSavedOutfitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/WardrobeSavedOutfitsView.swift; sourceTree = "<group>"; };
-		000000000000000000001032 /* WardrobeSavedOutfitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/WardrobeSavedOutfitsViewModel.swift; sourceTree = "<group>"; };
-		000000000000000000001033 /* AIWardrobeSuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/AIWardrobeSuggestionsView.swift; sourceTree = "<group>"; };
-		000000000000000000001034 /* AIWardrobeSuggestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Wardrobe/AIWardrobeSuggestionsViewModel.swift; sourceTree = "<group>"; };
-		000000000000000000001035 /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Discovery/DiscoveryView.swift; sourceTree = "<group>"; };
-		000000000000000000001036 /* DiscoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Discovery/DiscoveryViewModel.swift; sourceTree = "<group>"; };
-		000000000000000000001037 /* OutfitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Discovery/OutfitDetailView.swift; sourceTree = "<group>"; };
-		000000000000000000001038 /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Paywall/PaywallViewModel.swift; sourceTree = "<group>"; };
 		AA00000000000000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA00000000000000000000003 /* AffiliateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/AffiliateService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		000000000000000000003007 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		000000000000000000003007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		000000000000000000003003 = {isa = PBXGroup; children = (000000000000000000003001 /* BoilerplateApp */, 000000000000000000003002 /* Products */); sourceTree = "<group>"; };
 		000000000000000000003001 /* BoilerplateApp */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000001000 /* AppEnvironment.swift */,
-				000000000000000000001001 /* AppRouter.swift */,
-				000000000000000000001002 /* BoilerplateAppApp.swift */,
-				000000000000000000001003 /* AppError.swift */,
-				000000000000000000001004 /* FeatureFlagService.swift */,
-				000000000000000000001005 /* KeychainStore.swift */,
-				000000000000000000001006 /* AppLogger.swift */,
-				000000000000000000001007 /* NetworkModels.swift */,
-				000000000000000000001008 /* SessionStore.swift */,
-				000000000000000000001009 /* AppConfig.swift */,
-				00000000000000000000100A /* PrimaryButton.swift */,
-				00000000000000000000100B /* DSColor.swift */,
-				00000000000000000000100C /* DSTextField.swift */,
-				00000000000000000000100D /* DSCard.swift */,
-				00000000000000000000100E /* LoadingView.swift */,
-				00000000000000000000100F /* EmptyStateView.swift */,
-				000000000000000000001010 /* ErrorStateView.swift */,
-				000000000000000000001011 /* DSTypography.swift */,
-				000000000000000000001012 /* AuthViews.swift */,
-				000000000000000000001013 /* MainTabView.swift */,
-				000000000000000000001014 /* LegalViews.swift */,
-				000000000000000000001015 /* OnboardingView.swift */,
-				000000000000000000001016 /* PaywallView.swift */,
-				000000000000000000001017 /* ProfileView.swift */,
-				000000000000000000001018 /* SettingsView.swift */,
-				000000000000000000001019 /* Mocks.swift */,
-				00000000000000000000101A /* Protocols.swift */,
-				00000000000000000000101B /* ClothingItem.swift */,
-				00000000000000000000101C /* Outfit.swift */,
-				00000000000000000000101D /* TryOnSession.swift */,
-				00000000000000000000101E /* StoreKitService.swift */,
-				00000000000000000000101F /* ClothingFetchService.swift */,
-				000000000000000000001020 /* OutfitStore.swift */,
-				000000000000000000001021 /* TryOnView.swift */,
-				000000000000000000001022 /* ClothingInputView.swift */,
-				000000000000000000001023 /* PhotoUploadView.swift */,
-				000000000000000000001024 /* SavedOutfitsView.swift */,
-				000000000000000000001025 /* SubscriptionView.swift */,
-				000000000000000000001026 /* SecondaryButton.swift */,
-				000000000000000000001027 /* DSTag.swift */,
-				000000000000000000001028 /* DSMatchBadge.swift */,
-				000000000000000000001029 /* DSOutfitCard.swift */,
-				00000000000000000000102A /* OccasionTag.swift */,
-				00000000000000000000102B /* DiscoveryOutfit.swift */,
-				00000000000000000000102C /* AIStyleService.swift */,
-				00000000000000000000102D /* DiscoveryService.swift */,
-				00000000000000000000102E /* WardrobeView.swift */,
-				00000000000000000000102F /* MyClothingView.swift */,
-				000000000000000000001030 /* MyClothingViewModel.swift */,
-				000000000000000000001031 /* WardrobeSavedOutfitsView.swift */,
-				000000000000000000001032 /* WardrobeSavedOutfitsViewModel.swift */,
-				000000000000000000001033 /* AIWardrobeSuggestionsView.swift */,
-				000000000000000000001034 /* AIWardrobeSuggestionsViewModel.swift */,
-				000000000000000000001035 /* DiscoveryView.swift */,
-				000000000000000000001036 /* DiscoveryViewModel.swift */,
-				000000000000000000001037 /* OutfitDetailView.swift */,
-				000000000000000000001038 /* PaywallViewModel.swift */,
+				000000000000000000001000 /* App/AppEnvironment.swift */,
+				000000000000000000001001 /* App/AppRouter.swift */,
+				000000000000000000001002 /* App/BoilerplateAppApp.swift */,
+				000000000000000000001003 /* Core/ErrorHandling/AppError.swift */,
+				000000000000000000001004 /* Core/FeatureFlags/FeatureFlagService.swift */,
+				000000000000000000001005 /* Core/Keychain/KeychainStore.swift */,
+				000000000000000000001006 /* Core/Logger/AppLogger.swift */,
+				000000000000000000001007 /* Core/Networking/NetworkModels.swift */,
+				000000000000000000001008 /* Core/Storage/SessionStore.swift */,
+				000000000000000000001009 /* Core/Utilities/AppConfig.swift */,
+				00000000000000000000100A /* DesignSystem/Buttons/PrimaryButton.swift */,
+				00000000000000000000100B /* DesignSystem/Colors/DSColor.swift */,
+				00000000000000000000100C /* DesignSystem/Inputs/DSTextField.swift */,
+				00000000000000000000100D /* DesignSystem/Layout/DSCard.swift */,
+				00000000000000000000100E /* DesignSystem/Loading/LoadingView.swift */,
+				00000000000000000000100F /* DesignSystem/States/EmptyStateView.swift */,
+				000000000000000000001010 /* DesignSystem/States/ErrorStateView.swift */,
+				000000000000000000001011 /* DesignSystem/Typography/DSTypography.swift */,
+				000000000000000000001012 /* Features/Authentication/AuthViews.swift */,
+				000000000000000000001013 /* Features/Home/MainTabView.swift */,
+				000000000000000000001014 /* Features/Legal/LegalViews.swift */,
+				000000000000000000001015 /* Features/Onboarding/OnboardingView.swift */,
+				000000000000000000001016 /* Features/Paywall/PaywallView.swift */,
+				000000000000000000001017 /* Features/Profile/ProfileView.swift */,
+				000000000000000000001018 /* Features/Settings/SettingsView.swift */,
+				000000000000000000001019 /* Services/Mocks.swift */,
+				00000000000000000000101A /* Services/Protocols.swift */,
+				00000000000000000000101B /* Models/ClothingItem.swift */,
+				00000000000000000000101C /* Models/Outfit.swift */,
+				00000000000000000000101D /* Models/TryOnSession.swift */,
+				00000000000000000000101E /* Services/StoreKitService.swift */,
+				00000000000000000000101F /* Services/ClothingFetchService.swift */,
+				000000000000000000001020 /* Services/OutfitStore.swift */,
+				000000000000000000001021 /* Features/TryOn/TryOnView.swift */,
+				000000000000000000001022 /* Features/ClothingInput/ClothingInputView.swift */,
+				000000000000000000001023 /* Features/PhotoUpload/PhotoUploadView.swift */,
+				000000000000000000001024 /* Features/SavedOutfits/SavedOutfitsView.swift */,
+				000000000000000000001025 /* Features/Subscription/SubscriptionView.swift */,
+				000000000000000000001026 /* DesignSystem/Buttons/SecondaryButton.swift */,
+				000000000000000000001027 /* DesignSystem/Components/DSTag.swift */,
+				000000000000000000001028 /* DesignSystem/Components/DSMatchBadge.swift */,
+				000000000000000000001029 /* DesignSystem/Components/DSOutfitCard.swift */,
+				00000000000000000000102A /* Models/OccasionTag.swift */,
+				00000000000000000000102B /* Models/DiscoveryOutfit.swift */,
+				00000000000000000000102C /* Services/AIStyleService.swift */,
+				00000000000000000000102D /* Services/DiscoveryService.swift */,
+				00000000000000000000102E /* Features/Wardrobe/WardrobeView.swift */,
+				00000000000000000000102F /* Features/Wardrobe/MyClothingView.swift */,
+				000000000000000000001030 /* Features/Wardrobe/MyClothingViewModel.swift */,
+				000000000000000000001031 /* Features/Wardrobe/WardrobeSavedOutfitsView.swift */,
+				000000000000000000001032 /* Features/Wardrobe/WardrobeSavedOutfitsViewModel.swift */,
+				000000000000000000001033 /* Features/Wardrobe/AIWardrobeSuggestionsView.swift */,
+				000000000000000000001034 /* Features/Wardrobe/AIWardrobeSuggestionsViewModel.swift */,
+				000000000000000000001035 /* Features/Discovery/DiscoveryView.swift */,
+				000000000000000000001036 /* Features/Discovery/DiscoveryViewModel.swift */,
+				000000000000000000001037 /* Features/Discovery/OutfitDetailView.swift */,
+				000000000000000000001038 /* Features/Paywall/PaywallViewModel.swift */,
 				AA00000000000000000000001 /* Assets.xcassets */,
+				AA00000000000000000000003 /* AffiliateService.swift */,
 			);
 			path = BoilerplateApp;
 			sourceTree = "<group>";
 		};
-		000000000000000000003002 /* Products */ = {isa = PBXGroup; children = (000000000000000000003000 /* BoilerplateApp.app */); name = Products; sourceTree = "<group>"; };
+		000000000000000000003002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000003000 /* BoilerplateApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000000000000000000003003 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000003001 /* BoilerplateApp */,
+				000000000000000000003002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		000000000000000000003005 /* BoilerplateApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00000000000000000000300E /* Build configuration list for PBXNativeTarget "BoilerplateApp" */;
-			buildPhases = (000000000000000000003006 /* Sources */, 000000000000000000003007 /* Frameworks */, 000000000000000000003008 /* Resources */);
-			buildRules = ();
-			dependencies = ();
+			buildPhases = (
+				000000000000000000003006 /* Sources */,
+				000000000000000000003007 /* Frameworks */,
+				000000000000000000003008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
 			name = BoilerplateApp;
 			productName = BoilerplateApp;
 			productReference = 000000000000000000003000 /* BoilerplateApp.app */;
@@ -220,22 +249,43 @@
 /* Begin PBXProject section */
 		000000000000000000003004 /* Project object */ = {
 			isa = PBXProject;
-			attributes = {BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 1500; LastUpgradeCheck = 1500; TargetAttributes = {000000000000000000003005 = {CreatedOnToolsVersion = 15.0; }; }; };
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					000000000000000000003005 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
 			buildConfigurationList = 00000000000000000000300B /* Build configuration list for PBXProject "BoilerplateApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
-			knownRegions = (en, Base);
+			knownRegions = (
+				en,
+				Base,
+			);
 			mainGroup = 000000000000000000003003;
 			productRefGroup = 000000000000000000003002 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
-			targets = (000000000000000000003005 /* BoilerplateApp */);
+			targets = (
+				000000000000000000003005 /* BoilerplateApp */,
+			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		000000000000000000003008 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (AA00000000000000000000002 /* Assets.xcassets in Resources */,); runOnlyForDeploymentPostprocessing = 0; };
+		000000000000000000003008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA00000000000000000000002 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -243,78 +293,231 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000000000000002000 /* AppEnvironment.swift in Sources */,
-				000000000000000000002001 /* AppRouter.swift in Sources */,
-				000000000000000000002002 /* BoilerplateAppApp.swift in Sources */,
-				000000000000000000002003 /* AppError.swift in Sources */,
-				000000000000000000002004 /* FeatureFlagService.swift in Sources */,
-				000000000000000000002005 /* KeychainStore.swift in Sources */,
-				000000000000000000002006 /* AppLogger.swift in Sources */,
-				000000000000000000002007 /* NetworkModels.swift in Sources */,
-				000000000000000000002008 /* SessionStore.swift in Sources */,
-				000000000000000000002009 /* AppConfig.swift in Sources */,
-				00000000000000000000200A /* PrimaryButton.swift in Sources */,
-				00000000000000000000200B /* DSColor.swift in Sources */,
-				00000000000000000000200C /* DSTextField.swift in Sources */,
-				00000000000000000000200D /* DSCard.swift in Sources */,
-				00000000000000000000200E /* LoadingView.swift in Sources */,
-				00000000000000000000200F /* EmptyStateView.swift in Sources */,
-				000000000000000000002010 /* ErrorStateView.swift in Sources */,
-				000000000000000000002011 /* DSTypography.swift in Sources */,
-				000000000000000000002012 /* AuthViews.swift in Sources */,
-				000000000000000000002013 /* MainTabView.swift in Sources */,
-				000000000000000000002014 /* LegalViews.swift in Sources */,
-				000000000000000000002015 /* OnboardingView.swift in Sources */,
-				000000000000000000002016 /* PaywallView.swift in Sources */,
-				000000000000000000002017 /* ProfileView.swift in Sources */,
-				000000000000000000002018 /* SettingsView.swift in Sources */,
-				000000000000000000002019 /* Mocks.swift in Sources */,
-				00000000000000000000201A /* Protocols.swift in Sources */,
-				00000000000000000000201B /* ClothingItem.swift in Sources */,
-				00000000000000000000201C /* Outfit.swift in Sources */,
-				00000000000000000000201D /* TryOnSession.swift in Sources */,
-				00000000000000000000201E /* StoreKitService.swift in Sources */,
-				00000000000000000000201F /* ClothingFetchService.swift in Sources */,
-				000000000000000000002020 /* OutfitStore.swift in Sources */,
-				000000000000000000002021 /* TryOnView.swift in Sources */,
-				000000000000000000002022 /* ClothingInputView.swift in Sources */,
-				000000000000000000002023 /* PhotoUploadView.swift in Sources */,
-				000000000000000000002024 /* SavedOutfitsView.swift in Sources */,
-				000000000000000000002025 /* SubscriptionView.swift in Sources */,
-				000000000000000000002026 /* SecondaryButton.swift in Sources */,
-				000000000000000000002027 /* DSTag.swift in Sources */,
-				000000000000000000002028 /* DSMatchBadge.swift in Sources */,
-				000000000000000000002029 /* DSOutfitCard.swift in Sources */,
-				00000000000000000000202A /* OccasionTag.swift in Sources */,
-				00000000000000000000202B /* DiscoveryOutfit.swift in Sources */,
-				00000000000000000000202C /* AIStyleService.swift in Sources */,
-				00000000000000000000202D /* DiscoveryService.swift in Sources */,
-				00000000000000000000202E /* WardrobeView.swift in Sources */,
-				00000000000000000000202F /* MyClothingView.swift in Sources */,
-				000000000000000000002030 /* MyClothingViewModel.swift in Sources */,
-				000000000000000000002031 /* WardrobeSavedOutfitsView.swift in Sources */,
-				000000000000000000002032 /* WardrobeSavedOutfitsViewModel.swift in Sources */,
-				000000000000000000002033 /* AIWardrobeSuggestionsView.swift in Sources */,
-				000000000000000000002034 /* AIWardrobeSuggestionsViewModel.swift in Sources */,
-				000000000000000000002035 /* DiscoveryView.swift in Sources */,
-				000000000000000000002036 /* DiscoveryViewModel.swift in Sources */,
-				000000000000000000002037 /* OutfitDetailView.swift in Sources */,
-				000000000000000000002038 /* PaywallViewModel.swift in Sources */,
+				000000000000000000002000 /* App/AppEnvironment.swift in Sources */,
+				000000000000000000002001 /* App/AppRouter.swift in Sources */,
+				000000000000000000002002 /* App/BoilerplateAppApp.swift in Sources */,
+				000000000000000000002003 /* Core/ErrorHandling/AppError.swift in Sources */,
+				000000000000000000002004 /* Core/FeatureFlags/FeatureFlagService.swift in Sources */,
+				000000000000000000002005 /* Core/Keychain/KeychainStore.swift in Sources */,
+				000000000000000000002006 /* Core/Logger/AppLogger.swift in Sources */,
+				000000000000000000002007 /* Core/Networking/NetworkModels.swift in Sources */,
+				000000000000000000002008 /* Core/Storage/SessionStore.swift in Sources */,
+				000000000000000000002009 /* Core/Utilities/AppConfig.swift in Sources */,
+				00000000000000000000200A /* DesignSystem/Buttons/PrimaryButton.swift in Sources */,
+				00000000000000000000200B /* DesignSystem/Colors/DSColor.swift in Sources */,
+				00000000000000000000200C /* DesignSystem/Inputs/DSTextField.swift in Sources */,
+				00000000000000000000200D /* DesignSystem/Layout/DSCard.swift in Sources */,
+				00000000000000000000200E /* DesignSystem/Loading/LoadingView.swift in Sources */,
+				00000000000000000000200F /* DesignSystem/States/EmptyStateView.swift in Sources */,
+				000000000000000000002010 /* DesignSystem/States/ErrorStateView.swift in Sources */,
+				000000000000000000002011 /* DesignSystem/Typography/DSTypography.swift in Sources */,
+				000000000000000000002012 /* Features/Authentication/AuthViews.swift in Sources */,
+				000000000000000000002013 /* Features/Home/MainTabView.swift in Sources */,
+				000000000000000000002014 /* Features/Legal/LegalViews.swift in Sources */,
+				000000000000000000002015 /* Features/Onboarding/OnboardingView.swift in Sources */,
+				000000000000000000002016 /* Features/Paywall/PaywallView.swift in Sources */,
+				000000000000000000002017 /* Features/Profile/ProfileView.swift in Sources */,
+				000000000000000000002018 /* Features/Settings/SettingsView.swift in Sources */,
+				000000000000000000002019 /* Services/Mocks.swift in Sources */,
+				00000000000000000000201A /* Services/Protocols.swift in Sources */,
+				00000000000000000000201B /* Models/ClothingItem.swift in Sources */,
+				00000000000000000000201C /* Models/Outfit.swift in Sources */,
+				00000000000000000000201D /* Models/TryOnSession.swift in Sources */,
+				00000000000000000000201E /* Services/StoreKitService.swift in Sources */,
+				00000000000000000000201F /* Services/ClothingFetchService.swift in Sources */,
+				000000000000000000002020 /* Services/OutfitStore.swift in Sources */,
+				000000000000000000002021 /* Features/TryOn/TryOnView.swift in Sources */,
+				000000000000000000002022 /* Features/ClothingInput/ClothingInputView.swift in Sources */,
+				000000000000000000002023 /* Features/PhotoUpload/PhotoUploadView.swift in Sources */,
+				000000000000000000002024 /* Features/SavedOutfits/SavedOutfitsView.swift in Sources */,
+				000000000000000000002025 /* Features/Subscription/SubscriptionView.swift in Sources */,
+				000000000000000000002026 /* DesignSystem/Buttons/SecondaryButton.swift in Sources */,
+				000000000000000000002027 /* DesignSystem/Components/DSTag.swift in Sources */,
+				000000000000000000002028 /* DesignSystem/Components/DSMatchBadge.swift in Sources */,
+				000000000000000000002029 /* DesignSystem/Components/DSOutfitCard.swift in Sources */,
+				00000000000000000000202A /* Models/OccasionTag.swift in Sources */,
+				00000000000000000000202B /* Models/DiscoveryOutfit.swift in Sources */,
+				00000000000000000000202C /* Services/AIStyleService.swift in Sources */,
+				00000000000000000000202D /* Services/DiscoveryService.swift in Sources */,
+				00000000000000000000202E /* Features/Wardrobe/WardrobeView.swift in Sources */,
+				00000000000000000000202F /* Features/Wardrobe/MyClothingView.swift in Sources */,
+				000000000000000000002030 /* Features/Wardrobe/MyClothingViewModel.swift in Sources */,
+				000000000000000000002031 /* Features/Wardrobe/WardrobeSavedOutfitsView.swift in Sources */,
+				000000000000000000002032 /* Features/Wardrobe/WardrobeSavedOutfitsViewModel.swift in Sources */,
+				000000000000000000002033 /* Features/Wardrobe/AIWardrobeSuggestionsView.swift in Sources */,
+				000000000000000000002034 /* Features/Wardrobe/AIWardrobeSuggestionsViewModel.swift in Sources */,
+				000000000000000000002035 /* Features/Discovery/DiscoveryView.swift in Sources */,
+				000000000000000000002036 /* Features/Discovery/DiscoveryViewModel.swift in Sources */,
+				000000000000000000002037 /* Features/Discovery/OutfitDetailView.swift in Sources */,
+				000000000000000000002038 /* Features/Paywall/PaywallViewModel.swift in Sources */,
+				AA00000000000000000000004 /* AffiliateService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		000000000000000000003009 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ANALYZER_NONNULL = YES; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; GCC_C_LANGUAGE_STANDARD = gnu17; GCC_NO_COMMON_BLOCKS = YES; GCC_OPTIMIZATION_LEVEL = 0; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
-		00000000000000000000300A /* Release */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ANALYZER_NONNULL = YES; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; COPY_PHASE_STRIP = NO; ENABLE_NS_ASSERTIONS = NO; GCC_C_LANGUAGE_STANDARD = gnu17; GCC_NO_COMMON_BLOCKS = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_COMPILATION_MODE = wholemodule; }; name = Release; };
-		00000000000000000000300C /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; GENERATE_INFOPLIST_FILE = YES; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; INFOPLIST_KEY_CFBundleDisplayName = Mirra; INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity"; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.mirra.app; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
-		00000000000000000000300D /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; GENERATE_INFOPLIST_FILE = YES; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; INFOPLIST_KEY_CFBundleDisplayName = Mirra; INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity"; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.mirra.app; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Release; };
+		000000000000000000003009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		00000000000000000000300A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		00000000000000000000300C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Mirra;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mirra.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		00000000000000000000300D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Mirra;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mirra.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00000000000000000000300B /* Build configuration list for PBXProject "BoilerplateApp" */ = {isa = XCConfigurationList; buildConfigurations = (000000000000000000003009 /* Debug */, 00000000000000000000300A /* Release */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
-		00000000000000000000300E /* Build configuration list for PBXNativeTarget "BoilerplateApp" */ = {isa = XCConfigurationList; buildConfigurations = (00000000000000000000300C /* Debug */, 00000000000000000000300D /* Release */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		00000000000000000000300B /* Build configuration list for PBXProject "BoilerplateApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000003009 /* Debug */,
+				00000000000000000000300A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00000000000000000000300E /* Build configuration list for PBXNativeTarget "BoilerplateApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00000000000000000000300C /* Debug */,
+				00000000000000000000300D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 	};
 	rootObject = 000000000000000000003004 /* Project object */;
