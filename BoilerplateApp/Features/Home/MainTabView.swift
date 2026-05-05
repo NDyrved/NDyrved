@@ -42,13 +42,13 @@ struct HomeHubView: View {
                 VStack(alignment: .leading, spacing: 32) {
 
                     // Hero
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Your Virtual")
-                            .font(DSTypography.display)
-                            .foregroundStyle(DSColor.textPrimary)
-                        Text("Fitting Room")
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Mirra")
                             .font(DSTypography.display)
                             .foregroundStyle(DSColor.accent)
+                        Text("Your Virtual Fitting Room")
+                            .font(DSTypography.title2)
+                            .foregroundStyle(DSColor.textSecondary)
                     }
                     .padding(.horizontal, 24)
                     .padding(.top, 8)
